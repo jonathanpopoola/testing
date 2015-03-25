@@ -1,0 +1,154 @@
+/*
+* Skeleton V2.0
+* Copyright 2014, Dave Gamache
+* www.getskeleton.com
+* Free to use under the MIT license.
+* http://www.opensource.org/licenses/mit-license.php
+* 12/9/2014
+* Sass Version by Seth Coelen https://github.com/whatsnewsaes
+*/
+
+/* Variables
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+// Grid Variables
+$container-width: 996px;
+  $total-columns: 12;
+   $column-width: 100 / $total-columns; // calculates individual column width based off of # of columns
+  $column-margin: 3.666666666666%; // space between columns
+ $column-padding: 4px 0px; // space inside columns
+      $row-space:0rem; // Margin-bottom for .row
+
+
+// Breakpoints
+   $larger-than-mobile: 400px;
+  $larger-than-phablet: 550px;
+   $larger-than-tablet: 750px;
+  $larger-than-desktop: 1000px;
+$larger-than-desktophd: 1200px;
+
+// Misc
+$global-radius:4px;
+
+
+/* Grid
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+.container {
+  position: relative;
+  width: 80%;
+  max-width: $container-width;
+  margin: 0 auto;
+  padding: 0;
+  }
+.container .column,
+.container .columns {
+  float: left;
+  width: 100%;
+  box-sizing: border-box; }
+.row {
+  margin-bottom: $row-space; }
+.row .column:first-child,
+.row .columns:first-child {
+  margin-left: 0; }
+
+.container .column.right,
+.container .columns.right {
+	float:right;
+}
+
+/* For devices larger than 550px */
+@media (min-width: 550px) {
+  .container .column,
+  .container .columns {
+    margin-left: $column-margin;
+    padding: $column-padding;
+  }
+
+  .container .one.column,
+  .container .one.columns          { width: $column-width * 1 - ($column-margin);  }
+  .container .two.columns          { width: $column-width * 2 - ($column-margin);  }
+  .container .three.columns        { width: $column-width * 3 - ($column-margin);  }
+  .container .four.columns         { width: $column-width * 4 - ($column-margin);  }
+  .container .five.columns         { width: $column-width * 5 - ($column-margin);  }
+  .container .six.columns          { width: $column-width * 6 - ($column-margin);  }
+  .container .seven.columns        { width: $column-width * 7 - ($column-margin);  }
+  .container .eight.columns        { width: $column-width * 8 - ($column-margin);  }
+  .container .nine.columns         { width: $column-width * 9 - ($column-margin);  }
+  .container .ten.columns          { width: $column-width * 10 - ($column-margin); }
+  .container .eleven.columns       { width: $column-width * 11 - ($column-margin); }
+  .container .twelve.columns       { width: 100%; margin-left: 0; }
+
+  .container .one-third.column     { width: $column-width * 4 - ($column-margin );  }
+  .container .two-thirds.column    { width: $column-width * 8 - ($column-margin );  }
+
+  .container .one-half.column      { width: $column-width * 6 - ($column-margin );  }
+
+/* Offsets */
+  .container .offset-by-one.column,
+  .container .offset-by-one.columns       { margin-left: $column-width * 1 - ($column-margin);  }
+  .container .offset-by-two.column        { margin-left: $column-width * 2 - ($column-margin);  }
+  .container .offset-by-three.column      { margin-left: $column-width * 3 - ($column-margin);  }
+  .container .offset-by-four.column       { margin-left: $column-width * 4 - ($column-margin);  }
+  .container .offset-by-five.column       { margin-left: $column-width * 5 - ($column-margin);  }
+  .container .offset-by-six.column        { margin-left: $column-width * 6 - ($column-margin);  }
+  .container .offset-by-seven.column      { margin-left: $column-width * 7 - ($column-margin);  }
+  .container .offset-by-eight.column      { margin-left: $column-width * 8 - ($column-margin);  }
+  .container .offset-by-nine.column       { margin-left: $column-width * 9 - ($column-margin);  }
+  .container .offset-by-ten.column        { margin-left: $column-width * 10 - ($column-margin); }
+  .container .offset-by-eleven.column     { margin-left: $column-width * 11 - ($column-margin); }
+
+  .container .offset-by-one-third.column  { margin-left: $column-width * 4 - ($column-margin); }
+  .container .offset-by-two-thirds.column { margin-left: $column-width * 8 - ($column-margin); }
+
+  .container .offset-by-one-half.column   { margin-left: $column-width * 1 - ($column-margin); }
+
+}
+
+/* Utilities
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.u-full-width {
+  width: 100%;
+  box-sizing: border-box; }
+.u-max-full-width {
+  max-width: 100%;
+  box-sizing: border-box; }
+.u-pull-right {
+  float: right; }
+.u-pull-left {
+  float: left; }
+
+/* Clearing
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+/* Self Clearing Goodness */
+.container:after,
+.row:after,
+.u-cf {
+  content: "";
+  display: table;
+  clear: both; }
+
+
+// /* Media Queries
+// –––––––––––––––––––––––––––––––––––––––––––––––––– */
+// /*
+// Note: The best way to structure the use of media queries is to create the queries
+// near the relevant code. For example, if you wanted to change the styles for buttons
+// on small devices, paste the mobile query code up in the buttons secion and style it
+// there.
+// */
+
+// /* Larger than mobile */
+// @media (min-width: $larger-than-mobile) {}
+
+// /* Larger than phablet (also point when grid becomes active) */
+// @media (min-width: $larger-than-phablet) {}
+
+// /* Larger than tablet */
+// @media (min-width: $larger-than-tablet) {}
+
+// /* Larger than desktop */
+// @media (min-width: $larger-than-desktop) {}
+
+// /* Larger than Desktop HD */
+// @media (min-width: $larger-than-desktophd) {}

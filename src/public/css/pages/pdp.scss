@@ -1,0 +1,94 @@
+.product-title {
+	font-size: 30px;
+}
+
+.product-code {
+	font-size: 14px;
+}
+
+.product-meta {
+
+	text-align: right;
+
+	li {
+		list-style: none;
+		margin: 0;
+		display: block;
+	}
+
+	.pricesale {
+		text-transform: uppercase;
+	}
+}
+
+.price-disclaimer {
+	font-family: $argosBook;
+}
+
+.special-offer-link {
+	color: $color-red;
+	margin: 5px 0 10px 0;
+}
+
+.free-delivery {
+	font-family: $argosCondensedExtraBold;
+	font-size: 16px;
+	text-transform: uppercase;
+}
+
+.free-delivery:before {
+	content: "+";
+	margin-right: 4px;
+}
+
+.product-flags {
+	margin-bottom: 1.5em;
+}
+
+.product-rating {
+	background: transparent url( '../img/ratings.png' ) 0 0 no-repeat;
+	padding-left: 114px;
+	font-family: $argosBook;
+	font-size: 14px;
+	color: #777;
+	text-decoration: none;
+}
+
+.pdp-scene7 {
+	margin-bottom: 1.5em;
+}
+
+.social-buttons {
+	margin-bottom: 2em;
+}
+
+.pdp-fulfilment {
+	padding-top: 2em;
+}
+
+.product-more-info-list {
+
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+
+	li {
+		font-size: em( 10, 10 );
+		float: left;
+		width: 46%;
+		margin-right: 3%;
+		overflow: hidden;
+
+		&:nth-child( even ){
+			margin-right: 0;
+		}
+
+		a {
+			text-decoration: none;
+		}
+
+		img {
+			margin-bottom: em( 5, 10 );
+		}
+	}
+}

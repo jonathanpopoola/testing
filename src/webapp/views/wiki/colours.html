@@ -1,0 +1,48 @@
+{% extends '../layout.html' %}
+
+{% block title %}Wiki > Colours{% endblock %}
+
+{% set colours = {
+	"$color-red": "#EE3124",
+	"$color-green": "#00AA50",
+	"$color-lightgreen": "#8FC73E",
+	"$color-limegreen": "#bfd541",
+	"$color-purple": "#AA4E9E",
+	"$color-orange": "#F7941D",
+	"$color-white": "#FFFFFF",
+	"$color-grey": "#f7f7f7",
+	"$color-grey2": "#f8f8f8",
+	"$color-grey3": "#f2f2f2",
+	"$color-grey4": "#ccc",
+
+	"$text-grey1": "#040404",
+	"$text-grey2": "#777",
+	"$text-grey3": "#585858",
+	"$text-grey4": "#333",
+
+	"$text-red": "#EE3124",
+	"$text-green": "#00AA50"
+} %}
+
+{% block content %}
+
+<div class="content container">
+
+	<div class="row">
+
+		<ul class="one-half column">
+			{% for colour in colours %}
+			<li style="color: {{colour}}">{{loop.key}}: {{colour}}</li>
+			{% endfor %}
+		</ul>
+
+		<ul class="one-half column" style="background-color: #000;">
+			{% for colour in colours %}
+			<li style="color: {{colour}}">{{loop.key}}: {{colour}}</li>
+			{% endfor %}
+		</ul>
+
+	</div>
+</div>
+
+{% endblock content %}

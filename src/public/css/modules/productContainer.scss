@@ -1,0 +1,127 @@
+.product-container {
+	ul {
+        float: left;
+        margin: 0 1em 2em 0;
+        min-height: 22em;
+        padding: 1em;
+        width: 20.4em;
+	}
+	li {
+		list-style: none;
+	}
+	p {
+		margin: 0 0 6px 0;
+	}
+	.price {
+		color: #040404;
+		float: left;
+		font-size: 26px;
+		font-family: argoscompressed_bold;
+        font-weight: 400;
+        margin-right: 0.2em;
+	}
+	.pricesale,
+	.specialoffercount {
+		clear: both;
+        float: left;
+        font-size: em(18);
+		text-transform: uppercase;
+	}
+	.pricewas {
+		color: #777;
+		float: left;
+		font-size: em(11);
+		position: relative;
+		top: 7px;
+	}
+	.actions {
+		clear: both;
+		.primary {
+			font-size: 0.8em;
+		}
+		.tertiary {
+			font-size: 0.7em;
+			padding: 0 0.3em;
+		}
+	}
+	.product-id, .compare-button {
+		display: none;
+    }
+	.button.primary {
+		height: 1.6em;
+		line-height: 1.5em;
+		padding: 0 0.5em;
+	}
+	.delivery-information {
+		display: block;
+		float: left;
+		margin-top: 2.5em;
+		min-height: 2em;
+		width: 3.4em;
+	}
+	.delivery-icon {
+		display: block;
+		height: 1.3em;
+	}
+	.delivery-icon.delivery-icon.delivery {
+		background: url("../img/spritesheet.png") no-repeat scroll -104px -173px transparent;
+	}
+	.in-store {
+		background: url("../img/spritesheet.png") no-repeat scroll -104px -209px transparent;
+	}
+	.image {
+		float: left;
+		width: 10em;
+	}
+	img {
+    	width: 6em;
+    }
+	.title a {
+		color: #333;
+		clear: both;
+		font-size: 16px;
+		float: left;
+		margin-bottom: 10px;
+		width: 100%;
+		text-decoration: none;
+	}
+    .specialoffercount {
+    	color: #040404;
+		font-family: "argoscompressed_bold";
+		font-size: 18px;
+		text-transform: uppercase;
+    }
+    .compare a {
+    	position: relative;
+    	display: none;
+    	left: 3em;
+    	top: 2em;
+    }
+    label {
+    	 font-family: argosbook;
+    	 font-size: 1em;
+    }
+    hr {
+    	border: 0;
+        clear: both;
+        height: 1px;
+        background: #ccc;
+    }
+}
+
+.ad, .pagination-placeholder {
+	background: #ccc;
+	color: #fff;
+	display: block;
+	font-size: 16px;
+	float: right;
+	height: 50px;
+	margin-bottom: 10px;
+	margin-top: 10px;
+	text-decoration: none;
+	width: 100%;
+
+}
+
+
+

@@ -1,0 +1,23 @@
+.breadcrumb {
+	margin: 2em 0;
+	padding: 0;
+}
+
+.breadcrumb-item {
+	display: inline-block;
+	font-size: 12px;
+
+	a {
+		color: $text-grey1;
+		text-decoration: none;
+	}
+}
+
+.breadcrumb-item:after {
+	content: ">";
+	margin: 0 0.1em 0 0.3em;
+}
+
+.breadcrumb-item:last-of-type:after {
+	display: none;
+}

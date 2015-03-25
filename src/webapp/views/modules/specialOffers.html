@@ -1,0 +1,27 @@
+<div class="special-offers">
+	<div class="main-product recommendation-item">
+		{% include "../snippets/recommendationItem.html" mainItem %}
+		<ul class="actions">
+			<li class="buy"><a href="#" class="button primary">Buy</a></li>
+			<li class="quickview"><a href="#" class="button">Quick View</a></li>
+		</ul>
+	</div>
+
+	<div class="plus">
+		<span class="icon-plus"></span>
+	</div>
+
+	<div class="additional-product recommendation-item">
+		{% include "../snippets/recommendationItem.html" additionalItem %}
+	</div>
+
+	<div class="equals">
+		<span class="icon-equals"></span>
+	</div>
+
+	<div class="offer-price">
+		<span class="price-prefix">from</span>
+		<span class="price">{{ offerPrice | currency }}</span>
+		<a href="#" class="button special-offer">Add offer to trolley</a>
+	</div>
+</div>

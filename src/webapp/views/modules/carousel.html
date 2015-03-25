@@ -1,0 +1,16 @@
+<section class="carousel container" data-rel="{{ items.length }}">
+
+
+  <ul class="carousel-items colomns one">
+		{% for item in items %}
+    	<li {% if loop.first %}class="selected"{% endif %}><a href="{{ item.href }}" title="{{ item.linkText }}"><img src="{{ item.imgSrc }}" alt="" /></a><p>{{ item.description }}</p></li>
+		{% endfor %}
+  </ul>
+
+	<nav class="carousel-nav">
+		{% for item in items %}
+		<a href="{{ item.href }}" {% if loop.first %}class="selected"{% endif %} data-rel="{{ loop.index0 }}">&nbsp;</a>
+		{% endfor %}
+	</nav>
+
+</section>

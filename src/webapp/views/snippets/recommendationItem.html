@@ -1,0 +1,27 @@
+<a class="product-image" href="{{ url }}" tabindex="-1">
+	<img src="{{ image }}" alt="">
+</a>
+<h3 class="product-title">
+	<a href="{{ url }}">{{ title }}</a>
+</h3>
+<dl class="product-rating">
+	<dt class="accessibility">Product rating</dt>
+	<dd>
+		<a href="#">
+			<span class="accessibility">1 out of 5 stars</span> <span class="star-rating star-1"></span>(9)
+		</a>
+	</dd>
+</dl>
+<div class="product-price">
+	<span class="price small">&pound;{{ price.standard }}</span><br>
+    {% if price.was %}
+    <span class="pricewas">was &pound;{{ price.was }}</span><br>
+	{% endif %}
+    {% if price.save %}
+	<span class="pricesale">save &pound;{{ price.save }}</span><br>
+	{% endif %}
+    {% if specialoffercount %}
+	<span class="specialoffercount">{{ specialoffercount }}</span>
+	{% endif %}
+</div>
+<!--input type="image" alt="Remove [product name] from recently viewed items" class="product-remove"-->

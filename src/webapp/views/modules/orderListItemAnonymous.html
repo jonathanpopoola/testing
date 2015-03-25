@@ -1,0 +1,80 @@
+<div class="row panel wrapper-order-list-item-anonymous">
+
+	<div class="eight columns item">
+    	<form class="generic">
+        	<table border="1" cellpadding="0" cellspacing="0" class="order-item-anonymous">
+            	<caption class="accessibility">Product&#40;s&#41; added to torlley for home delivery and &#47; or store collection</caption>
+                	
+                <!--Order lister header start-->
+                <thead>
+                    <tr>
+                        <th scope="col" class="description">Product <span class="accessibility">image and description</span></th>
+                        <th scope="col" class="qty">Quantity</th>
+                        <th scope="col" class="price">Price</th>
+                    </tr>
+                </thead>
+                <!--Order lister header end-->
+                
+                <!--Order lister content start-->
+                <tbody>
+                	{% for item in data.items %}
+                    <tr>
+                        <td class="description">
+                            <span class="image">
+                                <a href="" tabindex="-1">
+                                	<img src="{{ item.image }}" width="70px" height="70px" alt="View details of Hoover Unplugged Cordless Vacuum Cleaner">
+                                </a>
+                            </span>
+                            <span class="title">
+                                <a href="">
+                                    {{ item.title }}
+                                </a>
+                                <br>
+                                <span><span class="accessibility">Product code: </span>{{ product.code }}</span>
+                            </span>
+                            <ul class="availability">
+                                <li class="icon-home-delivery"><span class="accessibility">This product is currently out of stock for Home Delivery</span></li>
+                                <li class="icon-store-collection"><span class="accessibility">This product is currently out of stock for Store Collection</span></li>
+                                <!--<li><span class="accessibility">This product is currently in stock for Home Delivery</span></li>
+                                <li><span class="accessibility">This product is currently in stock for Store Collection</span></li>-->
+                            </ul>
+                        </td>
+                        <td class="qty">
+                            <div class="select">
+                            	<!--Label IDs and Select IDs needs to be generated uniquely-->
+                                <label for="quantity_1" class="accessibility">Quantity_1</label>
+                                <div class="dropdown">
+                                    <select id="quantity_1">
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="btn-remove">
+                                <input type="image" value="Remove" alt="Remove">
+                            </div>
+                        </td>
+                        <td class="price">&pound;{{ item.price.standard }}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+                <!--Order lister content end-->
+            </table>
+        </form>
+        
+        <!--Order total and saving start-->
+        <table border="1" cellpadding="0" cellspacing="0" class="item-total-anonymous">
+        	<caption class="accessibility">Trolley totals, delivery charge and discounts</caption>
+			<tr class="row">
+				<th colspan="2" class="title">Subtotal: <span class="delivery-info">{{ deliveryMessage }}</span></th>
+				<td class="content">{{ subtotal | currency }}</td>
+			</tr>
+        </table>
+        <!--Order total and saving end-->
+    </div>
+    
+    <!--Store locator start-->
+    {% include "storeLocator.html" %}
+    <!--Store locator end-->
+</div>

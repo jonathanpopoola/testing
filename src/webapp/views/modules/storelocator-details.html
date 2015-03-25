@@ -1,0 +1,70 @@
+<div class="accordion">
+	{% for detail in details %}
+	<div class="storedetails">
+		<div class="accordion-header">
+			<span class="icon-accordion-pointer"></span>
+			<p>{{detail.title}}</p>
+			<span class="{{detail.extra}}"></span>
+			<span class="distance">
+				<p>{{detail.distance}} miles</p>
+			</span>
+			<span class="icon-chevron"></span>
+		</div>
+		<div class="accordion-wrapper">
+			<div class="storeaddress">
+				<p><strong>ADDRESS</strong></p>
+				<p>{{detail.address}}</p>
+				<p>{{detail.postcode}}</p>
+			</div>
+			<div class="storephonenumber">
+				<p><strong>TELEPHONE NUMBER</strong></p>
+				<p itemprop="telephone">{{detail.telephone}}</p>
+			</div>
+			<div class="opening-hours">
+				<p><strong>OPENING HOURS</strong></p>
+				<ul>
+					<li name="Mon">{{detail.mo.day}}
+						<time itemprop="openingHours" datetime="{{detail.mo.datetime}}">
+							{{detail.mo.time}}
+						</time>
+					</li>
+					<li name="Tue">{{detail.tu.day}}
+						<time itemprop="openingHours" datetime="{{detail.tu.datetime}}">
+							{{detail.tu.time}}
+						</time>
+					</li>
+					<li name="Wed">{{detail.we.day}}
+						<time itemprop="openingHours" datetime="{{detail.we.datetime}}">
+							{{detail.we.time}}
+						</time>
+					</li>
+					<li name="Thu">{{detail.th.day}}
+						<time itemprop="openingHours" datetime="{{detail.th.datetime}}">
+							{{detail.th.time}}
+						</time>
+					</li>
+					<li name="Fri">{{detail.fi.day}}
+						<time itemprop="openingHours" datetime="{{detail.fr.datetime}}">
+							{{detail.fi.time}}
+						</time>
+					</li>
+					<li name="Sat">{{detail.sa.day}}
+						<time itemprop="openingHours" datetime="{{detail.sa.datetime}}">
+							{{detail.sa.time}}
+						</time>
+					</li>
+					<li name="Sun">{{detail.su.day}}
+						<time itemprop="openingHours" datetime="{{detail.su.datetime}}">
+							{{detail.su.time}}
+						</time>
+					</li>
+				</ul>
+			</div>
+			<div class="cta-links">
+				<a class="button tertiary" href="/page/storelocator-map">View map</a>
+				<a class="button primary" href="/page/home">Shop Now</a>
+			</div>
+		</div>
+	</div>
+	{% endfor %}
+</div>

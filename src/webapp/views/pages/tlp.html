@@ -1,0 +1,28 @@
+{% extends '../layout.html' %}
+{% set product = data.product %}
+{% block title %}Your Trolley{% endblock %}
+
+{% block content %}
+<div class="content container">
+	<div class="row">
+		<h1 class="columns six">My Trolley</h1>
+		<div class="columns six right wrapper-continue-shopping">
+			<strong>Not ready to checkout</strong>
+			<a href="" class="button secondary">Continue shopping</a>
+		</div>
+     </div>   
+     <div class="row">
+		<div class="columns twelve"> 
+			{% include "../modules/orderListItem.html" data %}
+		</div>
+	</div>
+
+	<div class="panel">
+		{% include "../modules/argosCreditOffers.html" %}
+	</div>
+
+	
+		{% include "../modules/homeDeliveryAndStorePickupInfo.html" %}
+	
+</div>
+{% endblock content %}

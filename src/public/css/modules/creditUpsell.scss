@@ -1,0 +1,51 @@
+.panel-creditupsell {
+	
+	.columns.column-credit-info-text {
+		h4 {
+			color: $color-red;
+			font-size: 2.4em;
+			font-family: $argosBold;
+			margin-bottom:10px;
+		}
+		h5 {
+			font-size: 1.7em;
+			margin-bottom:10px;
+		}
+		p {
+			font-size: 12px;
+			line-height: 16px;
+			color:$text-grey2;
+		}
+	}
+	.columns.column-credit-info {
+		text-align: center;
+
+		h4 {
+			color:#040404;
+			font-size: 1.8em;
+			padding-top:10px;
+
+			span {
+				display: block;
+				font-size: 2em;
+				padding: 10px 0px;
+			}
+		}
+	}
+	.columns.column-credit-qualify {
+		h4 {
+			color:#09b2d1;
+			font-size: 1.7em;
+			font-family: $argosBold;
+			margin-bottom:15px;
+		}
+		ul li {
+			margin-bottom:10px;
+
+			a {
+				color:black;
+				font-size: 1em;
+			}
+		}
+	}
+}

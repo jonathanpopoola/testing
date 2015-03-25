@@ -1,0 +1,27 @@
+.card-img{
+	text-align:center;
+	font-size:150%;
+	font-weight:bold;
+	strong{
+		font-size:180%;
+		font-style:normal;
+		display:block;
+		float:left;
+		clear:both;
+		padding:em(2) 0;
+		}
+	}
+.card-info{
+	h3.title{
+		color:$highlight;
+		}
+		.copy{
+			font-size:em(12);
+			color:$darker-grey;
+			}
+	}
+.credit-plan{
+	h3.title{
+		color:$blue;
+		}
+	}	

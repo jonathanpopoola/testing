@@ -1,0 +1,23 @@
+
+<div class="facets">
+	<div class="reset">
+		<h3>161 matching products</h3>
+		<input type="button" value="Clear All" class="button tertiary reset-button">
+	</div>
+	{% for facet in items %}
+	<div class="section">
+		<h4>{{ facet.title }}<span class="toggle">-</span></h4>
+		<ul>
+			{% for item in  facet.items %}
+				<li>
+					<input type="checkbox" id="x1" />
+					<label for="x1">{{ item }}</label>
+				</li>
+			{% endfor %}
+		</ul>
+	</div>
+	{% endfor %}
+
+</div>
+
+

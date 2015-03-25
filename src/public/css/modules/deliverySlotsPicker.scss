@@ -1,0 +1,97 @@
+.delivery-pagination {
+	position: absolute;
+	top: -6.0em;
+	right: 4em;
+
+	a {
+		font-size: 1.4em;
+		margin-bottom: 1.0em;
+		display: inline-block;
+		position: relative;
+		padding: 0em 1.5em;
+
+		&.btn-earlier:before {
+			content: '<';
+			display: block;
+			position: absolute;
+			left: 0px;
+			top: 0px;
+		}
+		&.btn-later:before {
+			content: '>';
+			display: block;
+			position: absolute;
+			right: 0;
+			top: 0;
+		}
+	}
+}
+
+table.delivery-slot-picker {
+	tr {
+		padding: 1em;
+
+		td {
+			font-family:$argosBook;
+			font-weight: 400;
+			text-align: center;
+			border: 1px solid #e8e8e8;
+			padding-left:0;
+			width: 5.3em;
+
+			.day, .date, .deliveryprice, .starttime, .endtime {
+				display: block;
+				margin: 0;
+				line-height: 16px;
+			}
+			.day, .starttime {
+				margin-top:10px;
+			}
+			.date, .endtime {
+				margin-bottom: 10px;
+			}
+			.starttime, .endtime {
+				line-height: 12px;
+			}
+
+			&.noslotavailable {
+				background: $color-lighter-grey;
+			}
+			&.highlight {
+				border: 2px solid $color-green;
+			}
+			&.fullhighlight {
+				background: $color-green;
+				border: 2px solid $color-green;
+				color:white;
+			}
+		}
+	}
+}
+
+.key {
+	float: right;
+
+	li { 
+		list-style-type: none;
+		display: block;
+		float:right;
+		margin-left: 1em;
+		font-size: 1.2em;
+		text-align: center;
+
+		span.marker {
+			width: 6em;
+			height: 1em;
+			margin-bottom:1em;
+			display: block;
+
+			&.available {
+				background: $color-green;
+			}
+			&.notavailable {
+				background: $color-lighter-grey;
+			}
+		}
+	}
+}

@@ -1,0 +1,36 @@
+.pagination{
+	
+	width: 100%;
+	float: left;
+	clear: both;
+	
+	ul{
+		width: 100%;
+		min-height: 0;
+		margin: 0;
+		padding: 0;
+
+		li{
+			display: inline-block;
+			margin-right: 10px;
+
+			&.hidden{
+				display: none;
+
+			}
+
+			a.selected{
+				border: none;
+				border-bottom: 3px solid $color-orange;
+			}
+			
+			select{
+				background-image: linear-gradient(#ffffff, #eeeeee);
+				height: 3em;
+				margin-left: 4em;
+			}
+		}
+
+	}
+
+}

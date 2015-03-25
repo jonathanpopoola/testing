@@ -1,0 +1,47 @@
+.accessibility { display: none; }
+.facets{
+	position: relative;
+	overflow: hidden;
+	margin: 0;
+	padding: 10px;
+	width: 222px;
+	background-color: #f8f8f8;
+	font-size: 0.8em;
+	.reset {
+	  background-color: #f2f2f2;
+	  display: block;
+	  padding: 10px;
+		  .reset-button {
+
+		  }
+	}
+  h3 {
+	color: #040404;
+	font-weight: bold;
+	margin-bottom: 10px;
+  }
+  .section {
+	background-color: #f8f8f8;
+	color: #040404;
+	padding: 10px;
+		h4 {
+		  font-family: argosbook;
+		  font-size: 20px;
+		}
+		.toggle {
+		  display: block;
+		  cursor: pointer;
+		  float: right;
+		  font-size: 16px;
+		  margin-right: 5px;
+		}
+	ul {
+	  border: none;
+	  float: none;
+	  min-height: 40px;
+	  width: auto;
+	}
+
+  }
+}
+

@@ -1,0 +1,52 @@
+body.checkout-arrangedelivery {
+	background: $color-light-grey;
+
+	.panel {
+		padding-left: 0;
+		padding-right: 0;
+
+		h3 {
+			padding: 0 20px;
+			text-indent: 50px;
+			position: relative;
+
+			span {
+				position: absolute;
+				top:-10px;
+				left: 20px;
+			}
+		}
+	}
+
+	.columns:first-of-type {
+		position: relative;
+		padding-left: 20px;
+
+		.columns {
+			padding-left: 0px;
+		}
+	}
+
+	.order-summary {
+		h2 {
+			text-align: center;
+		}
+		.columns:last-child {
+			text-align: right;
+		}
+	}
+
+	.product {
+		position: relative;
+
+		img {
+			width: 60px;
+		}
+		.price {
+			text-align: right;
+			position: absolute;
+			right: 0px;
+			bottom: 25px;
+		}
+	}
+}

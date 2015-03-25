@@ -1,0 +1,42 @@
+.searchSuggestion {
+  background: $color-white;
+  border-bottom: 1px solid $color-grey4;
+  display: block;
+  height: auto;
+  float: left;
+  width: em(350);
+  position: absolute;
+  top: em(70);
+  left: em(173);
+  z-index: 1000;
+  h2, a {
+	clear: both;
+	font-family: arial;
+	font-size: em(12);
+	padding: em(5) em(10);
+	text-transform: none;
+  }
+  h2 {
+	background: $color-grey3;
+	border: 1px solid $color-grey4;
+	font-size: em(12);
+	font-weight: bold;
+	margin-bottom: 0;
+  }
+  a {
+	border: 1px solid $color-grey4;
+	border-bottom: none;
+	border-top: none;
+	clear: both;
+	display: block;
+	font-weight: normal;
+	white-space: normal;
+  }
+  a:hover {
+	background: $color-grey5;
+	color: $color-white;
+  }
+  span {
+	font-weight: 900;
+  }
+}

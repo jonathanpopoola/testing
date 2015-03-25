@@ -1,0 +1,10 @@
+{
+	"browser": true,
+
+	// Custom Globals
+    "globals": {
+	  "argos"	: {},
+	  "$"		: {},
+	  "jQuery"	: {}
+	}
+}

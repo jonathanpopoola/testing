@@ -1,0 +1,71 @@
+// Colours as specified by the Brand Guidelines
+
+$black:					#000 !default;
+$black-5:				tint($black, 95%) !default;
+$black-10:				tint($black, 90%) !default;
+$black-15:				tint($black, 85%) !default;
+$black-20:				tint($black, 80%) !default;
+$black-30:				tint($black, 70%) !default;
+$black-40:				tint($black, 60%) !default;
+$black-50:				tint($black, 50%) !default;
+$black-60:				tint($black, 40%) !default;
+$black-65:				tint($black, 35%) !default;
+$black-70:				tint($black, 30%) !default;
+$black-75:				tint($black, 25%) !default;
+$black-80:				tint($black, 20%) !default;
+$black-85:				tint($black, 15%) !default;
+$black-90:				tint($black, 10%) !default;
+$black-95:				tint($black, 5%) !default;
+
+
+
+
+$color-red: #EE3124;
+$color-green: #00AA50;
+$color-lightgreen: #8FC73E;
+$color-limegreen: #bfd541;
+$color-purple:#AA4E9E;
+$color-orange: #F7941D;
+$color-white: #FFFFFF;
+
+
+// Brand colours
+$red: #ee3124;
+$blue: #09b2d1;
+
+
+$lighter-grey: $black-10 !default;
+$light-grey: $black-20 !default;
+$dark-grey: $black-40 !default;
+$darker-grey: $black-60 !default;
+$darkest-grey: $black-80 !default;
+
+/*Please delete below style and replace with "$lighter-grey" "$light-grey" "$dark-grey" "$darker-grey" START*/
+$color-grey: #f7f7f7;
+$color-grey2: #f8f8f8;
+$color-grey3: #f2f2f2;
+$color-grey4: #ccc;
+$color-grey5: #585858;
+/*Please delete below style and replace with "$lighter-grey" "$light-grey" "$dark-grey" "$darker-grey" END*/
+
+$text-white: #fff;
+
+/*Please delete below style and replace with "$lighter-grey" "$light-grey" "$dark-grey" "$darker-grey" START*/
+$text-grey1: #040404;
+$text-grey2: #777;
+$text-grey3: #585858;
+$text-grey4: #333;
+/*Please delete below style and replace with "$lighter-grey" "$light-grey" "$dark-grey" "$darker-grey" END*/
+
+$text-red: #EE3124;
+$text-green: #00AA50;
+
+$highlight:#ee3124;
+
+/*Please delete below style and replace with "$lighter-grey" "$light-grey" "$dark-grey" "$darker-grey" START*/
+$color-lighter-grey: #f7f7f7;
+$color-light-grey: #f8f8f8;
+$color-dark-grey: #f2f2f2;
+$color-darker-grey: #ccc;
+/*Please delete below style and replace with "$lighter-grey" "$light-grey" "$dark-grey" "$darker-grey" END*/
+

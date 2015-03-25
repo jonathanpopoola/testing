@@ -1,0 +1,565 @@
+$sprite: transparent url(../img/spritesheet.png) no-repeat;
+
+body {
+  	background: #fff;
+  	margin: 0;
+  	padding: 0;
+  	font-size: 62.5%;
+  	font-family: Arial, Helvetica, sans-serif;
+	color: $text-grey4;
+}
+
+p {
+	font-weight: 300;
+	margin-bottom: 20px;
+	font-size: 1.4em;
+}
+
+strong {
+	font-weight: normal;
+	font-family: $argosBold;
+	font-size: 1.1em;
+}
+
+em {
+	font-style: italic;
+	font-family: $argosBookItalic;
+}
+
+hr {
+	border: 1px solid #CCC;
+	border-bottom: 0px;
+	margin: 18px 0;
+}
+
+%text {
+    font-family: argosbook;
+    font-size: 1.5em;
+}
+
+a {
+	color:$text-grey1;
+}
+
+h1,
+.main-heading {
+	font-family: $argosBook;
+	font-size: 3.0em;
+	color: #040404;
+	text-shadow: none;
+	font-weight: normal;
+	margin: 5px 0px;
+}
+
+h2 {
+	font-family: $argosBook;
+	font-size: 2.3em;
+	color: #040404;
+	text-shadow: none;
+	font-weight: normal;
+	margin: 0px 0px 10px 0px;
+}
+
+h3 {
+	font-family: $argosBook;
+	font-size: 2.0em;
+	color: #040404;
+	text-shadow: none;
+	font-weight: normal;
+	margin: 5px 0px;
+}
+
+h4 {
+	font-family: $argosBook;
+	font-size: 1.6em;
+	color: #040404;
+	text-shadow: none;
+	font-weight: normal;
+	margin: 5px 0px;
+}
+
+h5 {
+    font-family: $argosBook;
+	font-size: 1.3em;
+	color: #040404;
+	text-shadow: none;
+	font-weight: normal;
+	margin: 5px 0px;
+}
+
+.sub-heading {
+	font-family: $argosBold;
+	font-size: 2.0em;
+	color: #040404;
+	text-shadow: none;
+	font-weight: normal;
+	margin: 5px 0px;
+}
+
+.salehighlight, .promotionhighlight {
+	color:$text-red;
+}
+
+span,
+li,
+p {
+	&.price {
+		font-size: em( 37 );
+		font-family: $argosCompressedBold;
+		color: #040404;
+		text-shadow: none;
+		font-weight: normal;
+		display: inline-block;
+
+		&.small {
+			font-size: em( 23, 10 );
+		}
+	}
+	&.pricewas {
+		font-size: 1.6em;
+		color: #777;
+		font-family: $argosBookItalic;
+		text-shadow: none;
+		font-weight: normal;
+		padding-bottom: 0.2em;
+		display: inline-block;
+	}
+	&.pricesale {
+		font-size: 1.8em;
+		color: #EE3124;
+		text-shadow: none;
+		font-weight: normal;
+		font-family: $argosCondensedExtraBold;
+		padding-bottom: 0.2em;
+		display: inline-block;
+		text-transform: uppercase;
+	}
+	&.freedelivery {
+		font-family: $argosCondensedExtraBold;
+		font-size: 1.8em;
+		text-shadow: none;
+		font-weight: normal;
+		text-transform: uppercase;
+		padding-bottom: 0.2em;
+		display: inline-block;
+	}
+	&.required {
+		color: #09b2d1;
+	}
+}
+
+ul,
+ol {
+	padding-left: 20px;
+	margin-bottom: 10px;
+
+	li {
+
+		list-style-type: disc;
+		margin: 5px 0px;
+		font-size: 14px;
+		padding-bottom: 0.2em;
+
+		strong {
+			font-weight: normal;
+			font-size: 1.1em;
+		}
+
+		em {
+			font-style: italic;
+		}
+
+		&.panel {
+			list-style-type: none;
+		}
+	}
+}
+
+ol {
+	li {
+		list-style-type: decimal;
+	}
+}
+
+.button {
+	background-color: #FFF;
+	border: 1px solid #CCC;
+	border-bottom: 3px solid #CCC;
+	height: 28px;
+	display: inline-block;
+	font-family: $argosCondensedExtraBold;
+	color: #333;
+	text-transform: uppercase;
+	padding: 0 10px;
+	font-size: 1rem;
+	line-height: 28px;
+	white-space: nowrap;
+	text-decoration: none;
+
+	&.primary {
+		height: 40px;
+		font-size: 1.8em;
+		background-color: #00AA50;
+		color: #FFF;
+		border: none;
+		border-bottom: 3px solid #CCC;
+		line-height: 40px;
+		padding: 0 15px;
+	}
+
+	&.large {
+		height: 40px;
+		font-size: 1.8em;
+		line-height: 40px;
+		padding: 0 15px;
+	}
+
+	&.secondary {
+		color: #F7941D;
+	}
+
+	&.oneclick {
+		height: 40px;
+		font-size: 1.8em;
+		background-color: #AA4E9E;
+		color: #FFF;
+		border: none;
+		border-bottom: 3px solid #CCC;
+		line-height: 40px;
+		padding: 0 15px;
+	}
+
+	&.oneclickoff {
+		height: 40px;
+		font-size: 1.8em;
+		color: #AA4E9E;
+		line-height: 40px;
+		padding: 0 15px;
+	}
+
+	&:hover {
+		position: relative;
+		top: 1px;
+		border-bottom: 2px solid #CCC;
+		cursor: pointer;
+		text-decoration: none;
+	}
+
+	&:active {
+		background-color: #F7941D;
+		color: #FFF;
+	}
+
+	&.full {
+		width: 100%;
+	}
+
+	&.special-offer {
+		color: $text-red;
+	}
+}
+
+li a.button {
+	font-size: 1.0em;
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+  	width: 100%;
+	margin-bottom: 20px;
+
+	tr {
+		height: 32px;
+		line-height: 32px;
+
+		&.even {
+			background-color: #F5FCF8;
+		}
+
+		td {
+			border-right: 1px solid #F5F5F5;
+			padding-left: 18px;
+			width: 25%;
+			vertical-align: middle;
+			font-size: 1.4em;
+
+			&:last-of-type {
+				border-right: none;
+			}
+		}
+
+		&.title td {
+			background-color: #F5F5F5;
+			text-transform: uppercase;
+			font-family: $argosBold;
+			font-size: 1.8em;
+		}
+
+		&.odd:hover,
+		&.even:hover {
+			background-color: #BAE8D0;
+		}
+	}
+}
+
+
+%longer {
+    width: 290px;
+}
+
+form.generic {
+
+	background-color: #FFF;
+	display: table;
+	width: 100%;
+	margin-bottom: 20px;
+
+
+	input[type=text],
+	select,
+	textarea {
+		height: 35px;
+		border: 1px solid #CCC;
+		border-bottom: 3px solid #CCC;
+		padding: 0 10px;
+		margin-bottom: 10px;
+		font-size: 1.4em;
+
+        &.longer {
+            @extend %longer;
+        }
+
+        &.valid {
+            border-color: $color-limegreen;
+
+            + .valid-info {
+                margin-left: 20px;
+                display: inline-block;
+                line-height: 35px;
+            }
+        }
+
+        &.invalid {
+            border-color: $color-red;
+
+            + .invalid-info {
+                margin-left: 20px;
+                display: inline-block;
+                @extend %text;
+                color: $color-red;
+                line-height: 35px;
+            }
+        }
+
+	}
+
+	input[type=text]:focus,
+	textarea:focus {
+		margin: 1px 1px 10px;
+		border: none;
+		border-bottom: 3px solid #F7941D;
+		outline: none;
+	}
+
+	textarea {
+		height: auto;
+	}
+
+	label.field {
+		@extend %text;
+		display: block;
+		float: left;
+		line-height: 35px;
+		margin-right: 10px;
+		text-align: right;
+		width: 170px;
+	}
+
+	.dropdown {
+		width: 140px;
+		overflow: hidden;
+		border-right: 1px solid #CCC;
+		margin-bottom: 20px;
+		-webkit-appearance: none;
+		border-radius: 0;
+
+		select {
+			width: 160px;
+			margin-bottom: 0;
+			background: transparent url("../img/dropdown.png") no-repeat 80% 50%;
+			-webkit-appearance: none;
+			border-radius: 0;
+
+			&:hover {
+				cursor: pointer;
+				background: transparent url("../img/dropdown_focus.png") no-repeat 80% 50%;
+			}
+
+			option {
+				padding: 10px;
+			}
+		}
+
+		&.shorter {
+			width: 80px;
+
+			select {
+				width: 90px;
+			}
+		}
+
+        &.longer
+        {
+            @extend %longer;
+        }
+	}
+
+	input[type=checkbox],
+	input[type=radio] {
+		opacity: 0;
+		position: absolute;
+	}
+
+	input[type=checkbox] + label,
+	input[type=radio] + label {
+		padding-left: 23px;
+		height: 18px;
+		display: inline-block;
+		line-height: 18px;
+		background-repeat: no-repeat;
+		background-position: 0 0;
+		vertical-align: middle;
+		cursor: pointer;
+		background: url("../img/check_off.png") no-repeat;
+		font: 1.4em normal Helvetica, Arial, sans-serif;
+	}
+	input[type=checkbox] + label {
+		background: url("../img/check_off.png") no-repeat;
+	}
+	input[type=checkbox]:checked + label {
+		background: url("../img/check_on.png") no-repeat;
+	}
+	input[type=radio] + label {
+		background: url("../img/rad_off.png") no-repeat;
+	}
+	input[type=radio]:checked + label {
+		background: url("../img/rad_on.png") no-repeat;
+	}
+	input[type=checkbox]:focus + label,
+	input[type=checkbox]:checked:focus + label,
+	input[type=radio]:focus + label,
+	input[type=radio]:checked:focus + label  {
+		font-weight: bold;
+	}
+	label {
+		-webkit-touch-callout: none;
+		-webkit-user-select: none;
+		-khtml-user-select: none;
+		-moz-user-select: none;
+		-ms-user-select: none;
+		user-select: none;
+	}
+}
+
+.panel {
+	margin-top: 20px;
+	margin-bottom: 20px;
+	padding: 20px;
+	border-top: 2px solid #ccc;
+	background: white;
+
+	h3 {
+		font-size: 2.0em;
+		margin-bottom: 20px;
+		font-family: $argosBold;
+		font-weight: normal;
+	}
+
+	&.nomargin {
+		margin-bottom: 0px;
+		margin-top: 0px;
+	}
+
+	&.nopadding {
+		padding-top: 0px;
+		padding-bottom: 0px;
+	}
+}
+
+.panel.columns h3,
+.panel.column h3 {
+	padding: 10px 20px 0px 20px;
+}
+.panel-callout {
+	display: block;
+	text-align: center;
+	padding: 10px;
+	background: #f5f5f5;
+	border-top: 1px solid #d5d5d5;
+	font-family: $argosBook;
+	font-size: 1.5em;
+	color: #333333;
+}
+
+.clearfix{
+
+	&:before,
+	&:after{
+		display: table;
+		content: '';
+		line-height: 0;
+	}
+
+	&:after{
+		clear: both;
+	}
+}
+
+.loading {
+	-webkit-animation: spin 1.5s linear infinite;
+	-moz-animation: spin 1.5s linear infinite;
+	animation: spin 1.5s linear infinite;
+	margin: 0 0 20px 0;
+	width: 60px;
+	height: 60px;
+}
+
+@-moz-keyframes spin { 100% { -moz-transform: rotate(360deg); } }
+@-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }
+@keyframes spin { 100% { -webkit-transform: rotate(360deg); transform: rotate(360deg); } }
+
+.site-container {
+
+	.main-header > .container,
+	.content > .container,
+	.content.container,
+	.main-footer > .container {
+		min-width: 996px;
+	}
+
+	.content {
+		margin-top: 20px;
+	}
+}
+
+body.home .site-container .content {
+	margin-top: 0px;
+}
+
+.hidden {
+    display: none;
+}
+
+@mixin accessibility {
+	position: absolute;
+	left: -10000px;
+	height: 0;
+}
+
+.accessibility {
+	@include accessibility;
+}
+
+
+/* Only used for styling the example page */

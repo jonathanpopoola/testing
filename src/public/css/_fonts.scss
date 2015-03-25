@@ -1,0 +1,132 @@
+$argosBoldItalic: 'argosbold_italic';
+$argosBook: 'argosbook';
+$argosCompressedBold: 'argoscompressed_bold';
+$argosUltraLightItalic: 'argosultralight_italic';
+$argosBookItalic: 'argosbook_italic';
+$argosHeavyItalic: 'argosheavy_italic';
+$argosUltraLight: 'argosultralight';
+$argosHeavy: 'argosheavy';
+$argosBold: 'argosbold';
+$argosCondensedBook: 'argoscondensed_book';
+$argosCondensedExtraBold: 'argoscondensed_extrabold';
+
+@font-face {
+    font-family: 'argosbold_italic';
+    src: url('../fonts/argos-bolditalic-webfont.eot');
+    src: url('../fonts/argos-bolditalic-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/argos-bolditalic-webfont.woff') format('woff'),
+         url('../fonts/argos-bolditalic-webfont.ttf') format('truetype'),
+         url('../fonts/argos-bolditalic-webfont.svg#argosbold_italic') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'argosbook';
+    src: url('../fonts/argos-book-webfont.eot');
+    src: url('../fonts/argos-book-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/argos-book-webfont.woff') format('woff'),
+         url('../fonts/argos-book-webfont.ttf') format('truetype'),
+         url('../fonts/argos-book-webfont.svg#argosbook') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'argoscompressed_bold';
+    src: url('../fonts/argos-compressedbold-webfont.eot');
+    src: url('../fonts/argos-compressedbold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/argos-compressedbold-webfont.woff') format('woff'),
+         url('../fonts/argos-compressedbold-webfont.ttf') format('truetype'),
+         url('../fonts/argos-compressedbold-webfont.svg#argoscompressed_bold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'argosultralight_italic';
+    src: url('../fonts/argos-ultralightitalic-webfont.eot');
+    src: url('../fonts/argos-ultralightitalic-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/argos-ultralightitalic-webfont.woff') format('woff'),
+         url('../fonts/argos-ultralightitalic-webfont.ttf') format('truetype'),
+         url('../fonts/argos-ultralightitalic-webfont.svg#argosultralight_italic') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'argosbook_italic';
+    src: url('../fonts/argos-bookitalic-webfont.eot');
+    src: url('../fonts/argos-bookitalic-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/argos-bookitalic-webfont.woff') format('woff'),
+         url('../fonts/argos-bookitalic-webfont.ttf') format('truetype'),
+         url('../fonts/argos-bookitalic-webfont.svg#argosbook_italic') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'argosheavy_italic';
+    src: url('../fonts/argos-heavyitalic-webfont.eot');
+    src: url('../fonts/argos-heavyitalic-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/argos-heavyitalic-webfont.woff') format('woff'),
+         url('../fonts/argos-heavyitalic-webfont.ttf') format('truetype'),
+         url('../fonts/argos-heavyitalic-webfont.svg#argosheavy_italic') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'argosultralight';
+    src: url('../fonts/argos-ultralight-webfont.eot');
+    src: url('../fonts/argos-ultralight-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/argos-ultralight-webfont.woff') format('woff'),
+         url('../fonts/argos-ultralight-webfont.ttf') format('truetype'),
+         url('../fonts/argos-ultralight-webfont.svg#argosultralight') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'argosheavy';
+    src: url('../fonts/argos-heavy-webfont.eot');
+    src: url('../fonts/argos-heavy-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/argos-heavy-webfont.woff') format('woff'),
+         url('../fonts/argos-heavy-webfont.ttf') format('truetype'),
+         url('../fonts/argos-heavy-webfont.svg#argosheavy') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'argosbold';
+    src: url('../fonts/argos-bold-webfont.eot');
+    src: url('../fonts/argos-bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/argos-bold-webfont.woff') format('woff'),
+         url('../fonts/argos-bold-webfont.ttf') format('truetype'),
+         url('../fonts/argos-bold-webfont.svg#argosbold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'argoscondensed_book';
+    src: url('../fonts/argos-condensedbook-webfont.eot');
+    src: url('../fonts/argos-condensedbook-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/argos-condensedbook-webfont.woff') format('woff'),
+         url('../fonts/argos-condensedbook-webfont.ttf') format('truetype'),
+         url('../fonts/argos-condensedbook-webfont.svg#argoscondensed_book') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'argoscondensed_extrabold';
+    src: url('../fonts/argos-condensedextrabold-webfont.eot');
+    src: url('../fonts/argos-condensedextrabold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/argos-condensedextrabold-webfont.woff') format('woff'),
+         url('../fonts/argos-condensedextrabold-webfont.ttf') format('truetype'),
+         url('../fonts/argos-condensedextrabold-webfont.svg#argoscondensed_extrabold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}

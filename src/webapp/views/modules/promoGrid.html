@@ -1,0 +1,19 @@
+<section class="promoGrid container">
+	{% for item in items %}
+	
+		{% if loop.first || loop.index == 3 %}<div class="row">{% endif %}
+
+			{% if loop.index < 3 %}
+				<div class="columns six">
+			{% else %}
+				<div class="columns three">
+			{% endif %}
+			
+					{% include "../snippets/promoGridItem.html" item %}
+	
+			</div>
+					
+		{% if loop.last || loop.index == 2%}</div>{% endif %}
+	
+	{% endfor %}
+</section>

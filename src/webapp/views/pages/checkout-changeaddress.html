@@ -1,0 +1,78 @@
+{% extends '../layout.html' %}
+
+{% block content %}
+
+<div class="content container">
+
+	<div class="row panel">
+
+		<h3>Change delivery address</h3>
+
+		<hr />
+
+		<div class="columns twelve">
+
+			<form class="generic">
+
+				<label class="field" for="example3"><span class="required">*</span> Select from your saved addresses</label>
+				<div class="dropdown">
+					<select id="example3">
+						<option value="Mr">Select from your saved addresses</option>
+						<option value="Mr">Mr</option>
+						<option value="Mrs">Mrs</option>
+						<option value="Miss">Miss</option>
+						<option value="Dr">Dr</option>
+					</select>
+				</div>
+				<br/>
+				<button class="button">Deliver here</button>
+
+			</form>
+
+		</div>
+
+	</div>
+
+	<div class="row panel">
+
+		<h3>Or add a new address</h3>
+
+		<hr />
+
+		<div class="columns twelve">
+
+			<form class="generic">
+
+				<label class="field" for="example3"><span class="required">*</span> Title:</label>
+				<div class="dropdown shorter">
+					<select id="example3">
+						<option value="Mr">Mr</option>
+						<option value="Mrs">Mrs</option>
+						<option value="Miss">Miss</option>
+						<option value="Dr">Dr</option>
+					</select>
+				</div>
+
+				<label class="field" for="example1"><span class="required">*</span> First name:</label>
+				<input type="text" id="example1"><br>
+
+				<label class="field" for="example2"><span class="required">*</span> Surname:</label>
+				<input type="text" id="example2"><br>
+
+				<hr />
+
+				<label class="field" for="example5">House name / number:</label>
+				<input type="text" id="example5"><br>
+
+				<label class="field" for="example4"><span class="required">*</span> Postcode:</label>
+				<input type="text" id="example4"> <button class="button secondary">Find address</button> <button class="button">Complete manually</button>
+
+			</form>
+
+		</div>
+
+	</div>
+
+</div>
+
+{% endblock content %}

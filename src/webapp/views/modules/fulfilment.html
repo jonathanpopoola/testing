@@ -1,0 +1,101 @@
+{% set fData = fulfilment %}
+
+<div class="fulfilment">
+	<h2 class="accessibility">Purchasing and availability details</h2>
+
+	<ul class="fulfilment-tabs{% if ! ( fData.collection && fData.delivery ) %} single-tab{% endif %}">
+		{% if fData.collection %}
+		<li class="fulfilment-tab collection-tab{% if fData.collection.active %} active{% endif %}" data-tab-content="fulfilment-collection">
+			Store Collection
+		</li>
+		{% endif %}
+		{% if fData.delivery %}
+		<li class="fulfilment-tab delivery-tab{% if fData.delivery.active %} active{% endif %}" data-tab-content="fulfilment-delivery">
+			Home Delivery
+		</li>
+		{% endif %}
+	</ul>
+
+	{% if fData.collection %}
+	<div class="fulfilment-tab-content fulfilment-collection{% if fData.collection.active %} active{% endif %}">
+
+		<div class="fulfilment-location">
+			<h3 class="tab-heading">Collect from store</h3>
+			<p>Tell us where you are or <a href="">sign in</a> to check stock:</p>
+
+			<form action="" method="post" class="generic check-location-form">
+				<label for="check-location" class="accessibility">Enter a postcode or town name to check stock for collection</label>
+				<input id="check-location" type="text" value="" name="" maxlength="80" class="check-location">
+				<input type="submit" title="Check stock" value="Check" class="button submit-location">
+			</form>
+		</div>
+
+		<form action="" method="post" class="generic quantity-form">
+
+			<fieldset class="fulfilment-quantity-row">
+				<label for="fulfilment-collection-quantity">Quantity:</label>
+				<div class="dropdown">
+					<select name="fulfilment-collection-quantity" id="fulfilment-collection-quantity">
+						{% for value in fData.collection.quantity %}
+							<option value="{{ value }}">{{ value }}</option>
+						{% endfor %}
+					</select>
+				</div>
+			</fieldset>
+
+			<input class="button primary" type="submit" value="Buy Or Reserve">
+		</form>
+
+		<a href="#" class="button oneclickoff oneclick-button">Turn on 1 Click Reserve</a>
+
+		<p class="oneclick-message">The fastest way to place a reservation. See stock at your favourite stores.</p>
+	</div>
+	{% endif %}
+
+	{% if fData.delivery %}
+	<div class="fulfilment-tab-content fulfilment-delivery{% if fData.delivery.active %} active{% endif %}">
+
+		<div class="fulfilment-location">
+			<h3 class="tab-heading">Deliver to your address</h3>
+			<p>Enter postcode or <a href="">sign in</a> to check stock:</p>
+
+			<form action="" class="generic check-location-form">
+				<label for="check-location" class="accessibility">Enter a postcode or town name to check stock for delivery</label>
+				<input id="check-location" type="text" value="" name="check-location" maxlength="80" class="check-location">
+				<input type="submit" title="Check stock" value="Check" class="button submit-location">
+			</form>
+		</div>
+
+		<form action="" class="generic">
+			<fieldset class="fulfilment-quantity-row">
+				<label for="fulfilment-delivery-quantity">Quantity:</label>
+				<div class="dropdown">
+					<select name="fulfilment-delivery-quantity" id="fulfilment-delivery-quantity">
+						{% for value in fData.delivery.quantity %}
+							<option value="{{ value }}">{{ value }}</option>
+						{% endfor %}
+					</select>
+				</div>
+			</fieldset>
+			<input class="button primary" type="submit" value="Buy Or Reserve">
+		</form>
+	</div>
+	{% endif %}
+
+	<hr>
+
+	<div class="fulfilment-credit-info">
+		<h3 class="accessibility">Argos Credit Offers</h3>
+		<p class="buy-message-primary">Buy now, pay 9 months later <span class="alternate-colour">or</span> 36 months at &pound;14.20, APR 29.9&#037;</p>
+		<p class="buy-message-secondary">when you buy with the Argos Card. Representative 29.9% APR variable</p>
+		<a href="" class="buy-message-link button">More about Argos Credit Offers</a>
+	</div>
+
+	<hr>
+
+	<div class="fulfilment-shutl-info">
+		<h3 class="accessibility">Shutl express delivery</h3>
+		<p class="shutl-message">Delivery to your door from as little as 90 minutes, or choose a 1 hour slot</p>
+		<p>Sign in to check stock locally to check Shutl availability <a href="" class="icon-more-info"><span class="accessibility">More info</span></a></p>
+	</div>
+</div>

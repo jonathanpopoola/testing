@@ -1,0 +1,202 @@
+{% extends '../layout.html' %}
+
+{% set product = data.product %}
+
+{% block title %}PDP > {{ product.title }}{% endblock %}
+
+{% block content %}
+
+	<div class="container">
+		<div class="row">
+			<div class="eight columns pdp-content">
+
+				{% include "../modules/breadcrumb.html" data.breadcrumb %}
+
+				<div class="row">
+					<div class="product-info-container eight columns">
+						<h2 class="product-title">{{ product.title }}</h2>
+						<h3 class="product-code"><span class="accessibility">Product code:</span>{{ product.code }}</h3>
+
+						<div class="pdp-scene7">
+							{% include "../modules/scene7.html" %}
+						</div>
+
+						<div class="social-buttons">
+							{% include "../modules/social.html" %}
+						</div>
+					</div>
+
+					<div class="product-meta four columns">
+						<ul class="product-price-data">
+							<li class="price">
+								{{ product.price.standard | currency }}
+								{% if product.price.hasDisclaimer %}<span class="price-disclaimer">*</span>{% endif %}
+							</li>
+							<li class="pricewas">was: {{ product.price.was | currency }}</li>
+							<li class="pricesale">Save {{ product.price.save | currency }}</li>
+						</ul>
+
+						{% if product.flags %}
+						<ul class="product-flags">
+							{% if product.flags.specialOffers %}
+								<li class="special-offer">
+									<a href="#" class="special-offer-link button">
+										{{ product.flags.specialOffers }} Special Offer{% if product.flags.specialOffers > 1 %}s{% endif %}
+									</a>
+								</li>
+							{% endif %}
+							{% if product.flags.freeDelivery %}
+								<li class="free-delivery">Free Delivery</li>
+							{% endif %}
+						</ul>
+						{% endif %}
+
+						<a class="product-rating" href="#">({{ product.rating }})<span class="accessibility"> stars</span></a>
+					</div>
+				</div>
+
+				<hr class="product-info-divider">
+
+				<h4 class="sub-heading">{{ product.summary.title }}</h4>
+					<p>
+						{{ product.summary.text }}
+					</p>
+
+					<a class="button" href="#">Full Details</a>
+			</div>
+			<div class="four columns">
+
+				{% include "../modules/fulfilment.html" data %}
+
+			</div>
+		</div>
+
+		{% if data.extras || data.otherItems %}
+		<hr>
+
+		<div class="row">
+			{% if data.extras %}
+			<div class="six columns">
+				<h4 class="sub-heading">{{ data.extras.title }}</h4>
+				{% include "../modules/recommendations.html" { items: data.extras.products.items, halfWidth: true } %}
+			</div>
+			{% endif %}
+			{% if data.otherItems %}
+			<div class="six columns">
+				<h4 class="sub-heading">{{ data.otherItems.title }}</h4>
+				{% include "../modules/recommendations.html" { items: data.otherItems.products.items, halfWidth: true } %}
+			</div>
+			{% endif %}
+		</div>
+		{% endif %}
+
+		<hr>
+
+		<div class="row">
+			<div class="six columns">
+				<h4 class="sub-heading">{{ product.fullDescription.title }}</h4>
+				<p>
+					{{ product.fullDescription.text }}
+				</p>
+
+				<h5 class="sub-heading">{{ product.additionalInfo.title }}</h5>
+				<p>
+					{{ product.additionalInfo.text }}
+				</p>
+
+				<p>
+					Q & A links here
+				</p>
+			</div>
+			<div class="six columns">
+				<ul class="product-more-info-list">
+					<li>
+						<h4 class="sub-heading">Delivery</h4>
+						<a href="#">
+							<img src="/public/img/delivery-info.png" alt="Delivery graphic">
+							<p>Where you want it, when you want it.</p>
+						</a>
+					</li>
+					<li>
+						<h4 class="sub-heading">Further info</h4>
+						<a href="#">
+							<img src="/public/img/further-info.png" alt="Technical help icon on a TV">
+							<p>Need some help setting up your TV or just have a question to ask? Just click here.</p>
+						</a>
+					</li>
+					<li>
+						<h4 class="sub-heading">Telivision Buying Guide</h4>
+						<a href="#">
+							<img src="/public/img/tv-buying-guide.png" alt="Informaiton icon on a TV">
+							<p>Get advice on features and help choosing the right product for you.</p>
+						</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+
+		{% if product.specialOffers %}
+
+		<hr>
+
+		<div class="row">
+			<div class="twelve columns">
+				<h4 class="sub-heading">{{ product.specialOffers.title }}</h4>
+				{% include "../modules/specialOffers.html" data.specialOffers %}
+			</div>
+		</div>
+		{% endif %}
+
+		{% if data.alternatives %}
+
+		<hr>
+
+		<div class="row">
+			<div class="twelve columns">
+				<h4 class="sub-heading">{{ data.alternatives.title }}</h4>
+				{% include "../modules/recommendations.html" data.alternatives.products %}
+			</div>
+		</div>
+		{% endif %}
+
+		{% if data.reviews %}
+
+		<hr>
+
+		<div class="row">
+			<div class="twelve columns">
+				<h4 class="sub-heading">{{ data.reviews.title }}</h4>
+				{% include "../modules/reviews.html" data.reviews.reviews %}
+			</div>
+		</div>
+		{% endif %}
+
+		{% if data.questionsAndAnswers %}
+			{% include "../modules/questionsAndAnswers.html" %}
+		{% endif %}
+
+		{% if data.credit %}
+
+		<hr>
+
+		<div class="row">
+			<div class="seven columns">
+				<h4 class="sub-heading">{{ data.credit.title }}</h4>
+				{% include "../modules/pdpCredit.html" data.product %}
+			</div>
+		</div>
+		{% endif %}
+
+		<hr>
+
+		<div class="row">
+			<div class="twelve columns">
+				<h4 class="sub-heading">{{ data.deliveryInfo.title }}</h4>
+				<p>
+					{{ data.deliveryInfo.text }}
+				</p>
+			</div>
+		</div>
+	</div>
+
+{% endblock content %}

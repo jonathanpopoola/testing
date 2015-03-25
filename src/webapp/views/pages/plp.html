@@ -1,0 +1,82 @@
+{% extends '../layout.html' %}
+
+{% block title %}PLP{% endblock %}
+
+{% block content %}
+
+<div class="content container">
+
+	<div class="example-grid docs-example">
+		<div class="product-container">
+
+			{% include "../modules/breadcrumb.html" data.breadcrumb %}
+
+			<h1>Televisions (165 products)</h1>
+
+			<div class="row">
+				<div class="three columns"> <!-- facets-->
+					{% include "../modules/facets.html" data.facets %}
+				</div>
+				<div class="nine columns"> <!-- product lister -->
+					<a class="ad" href="">Advert placeholder</a>
+					{% include "../modules/pagination.html" %}
+					{% for item in data.items %}
+					<ul>
+						<li>
+							<a class="image" href="{{ item.url }}">
+								<img height="auto" width="auto" alt="{{ item.title }}" src="{{ item.image }}" />
+							</a>
+							<span class="product-id">{{ item.productId }}</span>
+							<div class="delivery-information">
+								{% if item.deliveryStatus %}
+								<span class="delivery-icon {{ item.deliveryStatus }}"></span>
+								{% endif %}
+								{% if item.deliveryMethod %}
+								<span class="delivery-icon {{ item.deliveryMethod }}"></span>
+								{% endif %}
+							</div>
+							<h3 class="title"><a href="{{ item.url }}">{{ item.title }}</a></h3>
+							<p class="price">&pound;{{ item.price.standard }}</p>
+							{% if item.price.was %}
+							<p class="pricewas">was &pound;{{ item.price.was }}</p>
+							{% endif %}
+							{% if item.price.save %}
+							<p class="pricesale">save &pound;{{ item.price.save }}</p>
+							{% endif %}
+							{% if item.specialoffercount %}
+							<p class="specialoffercount">{{ item.specialoffercount }}</p>
+							{% endif %}
+							<p class="deliveryStatus"><span class="{{ item.deliveryStatus }}"></span></p>
+							<p class="deliveryMethod"><span class="{{ item.deliveryMethod }}"></span></p>
+							<p class="actions">
+								{% if item.actions.buy %}
+								<a class="button primary">{{ item.actions.buy }}</a>
+								{% endif %}
+								<a class="button tertiary">{{ item.actions.quickView }}</a>
+							</p>
+							<fieldset class="compare">
+								<input id="product{{ item.productId }}" type="checkbox" value="{{ item.productId }}">
+								<label for="product{{ item.productId }}">Compare</label>
+								<a class="compare-button button tertiary">Compare</a>
+							</fieldset>
+
+						</li>
+					</ul>
+					{% endfor %}
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="row">
+		<div class="twelve columns">
+			<h2>Recommendation block</h2>
+			{% include "../modules/recommendations.html" data.recommendations %}
+		</div>
+	</div>
+
+</div>
+
+{% endblock content %}
+
+

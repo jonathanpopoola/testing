@@ -1,0 +1,118 @@
+$border-width: .1rem;
+$author-block-width: 12rem;
+
+.questions-and-answers{
+	font-family: $argosBook;
+	font-size: 1rem;
+	border-top: $border-width solid $black-20;
+	
+	.icon-user{
+		margin-right: 0.25rem;
+	}
+	
+	.question{
+		position: relative;
+		min-height: 8rem;
+		
+		.author{
+			position: absolute;
+			right: 0;
+			width: $author-block-width;
+			box-sizing: border-box;
+			height: 100%;
+			
+			dl{
+				margin: 0 2rem;
+				
+				dt{
+					margin-bottom: 0.5rem;
+					font-family: $argosCompressedBold;
+					font-size: 1.5rem;
+					text-align: center;
+				}
+				
+				dd{
+					margin: 0.25rem 0;
+				}
+			}
+			
+			.answer-button{
+				position: absolute;
+				bottom: 0;
+				width: 100%;
+				text-align: center;
+			}
+		}
+		
+		.question-age{
+			margin: 1rem 0 3rem;
+		}
+		
+		h2{
+			margin-top: 1.5rem;
+			font-size: 1.25rem;
+			
+			.icon-answer-bubble{
+				margin-right: 0.5rem;
+			}
+		}
+	}
+	
+	.answer{
+		position: relative;
+		padding-right: $author-block-width;
+		border: $border-width solid $black-20;
+		
+		.answer-header{
+			position: relative;
+			
+			.author-type{
+				float: left;
+				margin: 0.5rem;
+				padding-right: 0.5rem;
+				border: $border-width solid $black-20;
+				border-left-width: 0;
+				background-color: $black-5;
+				
+				.icon-argos-logo{
+					margin-right: 0.5rem;
+					vertical-align: middle;
+				}
+			}
+			
+			.is-helpful{
+				float: right;
+				line-height: 3rem;
+			}
+		}
+		
+		.answer-body{
+			padding: 1rem;
+			border-top: $border-width solid $black-20;
+			
+			time{
+				display: block;
+				margin-bottom: 2rem;
+			}
+			
+			p{
+				font-size: inherit; //TODO: Overrides default style. Should remove default size?
+			}
+		}
+		
+		.author{
+			position: absolute;
+			right: 0;
+			width: $author-block-width;
+			box-sizing: border-box;
+			height: 100%;
+			padding-top: 6rem;
+			font-family: $argosCompressedBold;
+			font-size: 1.5rem;
+			text-align: center;
+			border-left: $border-width solid $black-20;
+			background-color: $black-5;
+		}
+	}
+	
+}

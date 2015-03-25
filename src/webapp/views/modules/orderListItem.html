@@ -1,0 +1,106 @@
+<div class="row panel wrapper-order-list-item">
+
+	<div class="twelve columns item">
+    	<form class="generic" action="/page/checkout-arrangedelivery/1">
+        	<table border="1" cellpadding="0" cellspacing="0" class="order-item">
+            	<caption class="accessibility">{{orderItemSummary}}</caption>
+                
+                <!--Order lister header start-->
+                <thead>
+                    <tr>
+                        <th scope="col" class="description">Product <span class="accessibility">image and description</span></th>
+                        <th scope="col" class="qty">Quantity</th>
+                        <th scope="col" class="price">Price</th>
+                        <th scope="col" class="store-collection">
+                        	<div class="title">
+                            	<span class="icon-collection-inverse"></span>
+                                <span class="copy-collection">Store Collection</span>
+                            </div>
+                            <div class="content">
+                            	<span>Feltham</span>
+                                <a class="button tertiary">Change</a>
+                            </div>
+                        </th>
+                        <th scope="col" class="home-delivery">
+                        	<div class="title">
+                            	<span class="icon-delivery-inverse"></span>
+                                <span class="copy-delivery">Home Delivery</span>
+                            </div>
+                            <div class="content">
+                            	 <input type="text" class="change-address">
+                                 <input type="button" class="button tertiary" value="Change">                         
+                            </div>
+                        </th>
+                    </tr>
+                </thead>
+                <!--Order lister header end-->
+                
+                <!--Order lister content start-->
+                <tbody>
+                	{% for product in items %}
+                    {% set inStockForCollection = product.stock.collection.available %}
+                    {% set inStockForDelivery = product.stock.delivery.available %}
+                    <tr>
+                        <td class="description">
+                            <span class="image">
+                                <a href="" tabindex="-1">
+                                	<img src="{{ product.image }}" width="70px" height="70px" alt="View details of Hoover Unplugged Cordless Vacuum Cleaner">
+                                </a>
+                            </span>
+                            <span class="title">
+                                <a href="">
+                                    {{ product.title }}
+                                </a>
+                                <br>
+                                <span><span class="accessibility">Product code: </span>{{ product.code }}</span>
+                            </span>
+                        </td>
+                        <td class="qty">
+                            <div class="select">
+                                <label for="quantity_1" class="accessibility">Quantity_1</label>
+                                <div class="dropdown">
+                                	<select name="fulfilment-collection-quantity" id="fulfilment-collection-quantity">
+                                    	{% for value in quantity %}
+                                        <option value="{{ value }}">{{ value }}</option>
+                                        {% endfor %}
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="btn-remove">
+                                <input type="image" value="Remove" alt="Remove">
+                            </div>
+                        </td>
+                        <td class="price">{{ product.price.standard | currency }}</td>
+                        <td class="availability {%if inStockForCollection %}in-stock{% else %}out-of-stock{% endif %}">
+                        	<div>
+                        		<span class="icon icon-availability-{%if inStockForCollection %}instock{% else %}out-of-stock{% endif %}"></span>
+                            	<span style="display:table;">{% if product.stock.collection %}{{ product.stock.collection.message}}{% else %}Store collection not available{% endif %}</span>
+                            </div>
+                        </td>
+                        <td class="availability {% if inStockForDelivery %}in-stock{% else %}out-of-stock{% endif %}">
+                        	<div>
+                        		<span class="icon icon-availability-{% if inStockForDelivery %}instock{% else %}out-of-stock{% endif %}"></span>
+                            	<span style="display:table;">{% if product.stock.delivery %}{{ product.stock.delivery.message}}{% else %}Home delivery not available{% endif %}</span>
+                            </div>
+                        </td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+                <!--Order lister content end-->
+            </table>
+            
+            <!--Order total and CTA start-->
+            <table border="1" cellpadding="0" cellspacing="0" class="order-total" >
+            	<caption class="accessibility">{{orderTotalSummary}}</caption>
+                <tr class="row">
+                	<th colspan="2" class="title">Subtotal: <span class="delivery-info">{{ deliveryMessage }}</span></th>
+                    <td class="content">{{ subtotal | currency }}</td>
+                    <td class="cta-store-collection"><input type="submit" value="Store Collection" name="" class="button primary"></td>
+                    <td class="cta-home-delivery"><input type="submit" value="Home Delivery" name="" class="button primary"></td>
+                </tr>
+            </table>
+            <!--Order total and CTA end-->
+            
+        </form>
+    </div>
+</div>

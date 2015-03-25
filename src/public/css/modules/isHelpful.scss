@@ -1,0 +1,14 @@
+.is-helpful{
+	display: inline-block;
+	font-size: 1rem;
+	
+	a{
+		margin: 0 0.75rem;
+		text-decoration: none;
+		
+		.icon-thumbs-up,
+		.icon-thumbs-down{
+			margin-right: 0.5rem;
+		}
+	}
+}

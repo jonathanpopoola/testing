@@ -1,0 +1,107 @@
+{% extends '../layout.html' %}
+
+{% set product = data.product %}
+
+{% block content %}
+
+<div class="content container">
+
+	<div class="row panel panel-trolleyaddsummary">
+
+		<div class="five columns">
+			<h2>{{ product.quantity }} item has been added to your trolley</h2>
+		</div>
+
+		<div class="five columns">
+			<img src="{{product.image}}" alt="Added to your basket: Subaru Radio Controlled Rally Car" />
+			<span class="producttitle">{{ product.title }}</span>
+			<span class="quantity">Qty: {{ product.quantity }}</span>
+		</div>
+
+		<div class="two columns right actions">
+			<a href="/" class="button tertiary large">Continue Shopping</a>
+            <br>
+			<a href="/page/tlp/1" class="button primary">Go to trolley</a>
+		</div>
+
+	</div>
+
+	<div class="row">
+		{% if product.protectPlan %}
+		<div class="four columns panel panel-trolleyprotect">
+
+			<h3>Would you like to protect your item?</h3>
+
+
+			<div class="panel-callout">
+				This item will be <strong>{{product.protectPlan.deliveryType}}</strong> to you
+			</div>
+
+			<div class="row panel-protectoptions">
+
+				<div class="four columns">
+
+					<span class="icon-protectandsmile"></span>
+
+				</div>
+
+				<div class="eight columns">
+
+					<h4>{{product.protectPlan.title}}</h4>
+					<h5>{{product.protectPlan.code}}</h5>
+					<span class="price">{{product.protectPlan.price.standard | currency}}</span><br/>
+					<span class="pricewas">Was {{product.protectPlan.price.was | currency}}</span><br/>
+					<span class="pricesale">Save {{product.protectPlan.price.save | currency}}</span><br/>
+					<span class="freedelivery">{{product.protectPlan.delivery}}</span>
+
+				</div>
+
+			</div>
+
+			<div class="row">
+
+				<div class="columns twelve">
+
+					<form class="generic">
+
+						<div class="radiofields">
+							<input type="radio" name="number" value="one" id="rad1">
+							<label for="rad1"><span class="price small">{{product.protectPlan.price.standard | currency}}</span>, add to my trolley</label>
+						</div>
+						<div class="radiofields">
+							<input type="radio" name="number" value="two" id="rad2">
+							<label for="rad2">Not this time</label>
+						</div>
+
+					</form>
+
+				</div>
+
+			</div>
+
+		</div>
+		{% endif %}
+
+		<div class="eight columns panel right">
+
+			<h3>You might like to consider</h3>
+
+			<hr />
+
+			<div class="row">
+				<div class="twelve columns">
+					{% include "../modules/recommendations.html" data.recommendations %}
+				</div>
+			</div>
+
+		</div>
+
+	</div>
+
+	<div class="row panel">
+    	{% include "../modules/argosCreditOffers.html" %}
+    </div>
+
+</div>
+
+{% endblock content %}

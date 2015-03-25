@@ -1,0 +1,56 @@
+.carousel{
+	position: relative;
+
+	.carousel-items{
+		padding: 0;
+		width: 100%;
+		height: 37em;
+		position: relative;
+
+		li{
+			list-style: none;
+			margin: 0;
+			position: absolute;
+			top: 0;
+			left: 0;
+			font-size: 1em;
+			display: block;
+			transition: opacity, 1s ease-out;
+			opacity: 0;
+
+			&.selected{
+				opacity: 1;
+			}
+
+			img{
+				margin-left: -10.2em;
+			}
+
+			p{
+				width: 60%;
+				font-size: 1.1em;
+				margin-top: .6em;
+			}
+		}
+	}
+
+	.carousel-nav{
+		position: absolute;
+		bottom: 0;
+		right: 0;
+
+		a{
+			width: 1.3em;
+			height: 1.3em;
+			display: inline-block;
+			border: 1px solid #ccc;
+			overflow: hidden;
+			text-indent: -10000px;
+			margin-left: 10px;
+
+			&.selected{
+				background: #c9362c;
+			}
+		}
+	}
+}

@@ -1,0 +1,489 @@
+form.store-locator-block{
+	background-color:$lighter-grey;
+	padding:em(30) 0 em(25) 0;
+	margin:0;
+	text-align:center;
+	vertical-align:middle;
+	ul{
+		margin:0;
+		padding:0;
+		li{
+			list-style:none;
+			display:inline-block;
+			width:40%;
+			margin:0;
+			&.option{
+				width:20px;
+				}
+			}
+	}
+}
+
+.storelocator-landing,
+.storelocator-refined,
+.storelocator-details,
+.storelocator-map {
+  background: #efefef;
+}
+
+.store-search {
+  background: #fff;
+  padding-bottom: em(26);
+  h2 {
+	border-bottom: em(1) solid #c7c7c7;
+	border-top: em(2) solid #c7c7c7;
+	font-size: em(17);
+	padding: em(15) em(10) em(12) em(5);
+  }
+  fieldset {
+	padding: em(10) em(25);
+	label, p {
+	  color: #343434;
+	  font-size: em(12);
+	}
+	label {
+	  margin-right: em(15);
+	}
+	input[type="text"] {
+	  border: em(1) solid $color-grey4;
+	  padding: em(8);
+	}
+	div {
+	  float: left;
+	}
+	.button.primary {
+	  position: relative;
+	  top: em(1.5);
+	  width: em(50);
+	  margin-right: em(15);
+	}
+	.first {
+	  width: em(103);
+	}
+	.second {
+	  width: em(180);
+	}
+  }
+  .icon-store-locator-search {
+	float: left;
+	margin-right: em(10);
+	position: relative;
+	top: -11px;
+  }
+}
+
+.store-selector {
+  ul {
+	padding: 0;
+	li {
+	  float: left;
+	  list-style: none;
+	  width: 9.5%;
+	  text-align: center;
+	  margin-right: em(10);
+	  cursor: pointer;
+	  background: #777;
+	  a {
+		color: $color-white;
+		display: block;
+		font-size: em(20);
+		font-weight: 800;
+		font-family: argosbook;
+		padding: em(8) em(4);
+		text-decoration: none;
+		text-transform: uppercase;
+	  }
+	  a:active {
+		background: $color-white;
+		color: #000;
+	  }
+
+	}
+  }
+
+}
+
+.store-list {
+	background: #fff;
+  	clear: both;
+  	position: relative;
+  	top: -5px;
+	h4 {
+	  background: $color-white;
+	  text-transform: uppercase;
+	  font-size: em(30);
+	  padding: em(20) 0 em(10) em(6);
+	  margin-top: em(5);
+  }
+  ul {
+	background: $color-white;
+	margin: 0;
+	li {
+	  list-style: none;
+	  padding:0;
+	  line-height: em(6);
+	}
+	a {
+	  color: $text-grey4;
+	  font-size: 12px;
+	  text-decoration: none;
+	}
+  }
+
+}
+
+.storelocator-refined {
+  .continue {
+	width: em(230);
+	text-align: center;
+  }
+  .store-search {
+	border-top: em(1) solid #c7c7c7;
+	h2 {
+	  margin-top: em(20);
+	}
+	h2, p {
+	  display: none;
+	}
+  }
+}
+
+.store-areas {
+  background: $color-white;
+  padding-left: 0;
+  margin: em(40) 0 em(10) 0;
+  h4 {
+	border-bottom: 1px solid #e8e8e8;
+	font-size: em(13);
+	margin: 0;
+	padding:em(17) em(10) em(10) em(10);
+  }
+  li {
+	border-bottom: 1px solid #e8e8e8;
+	list-style: none;
+	line-height: em(6);
+	margin: 0;
+	padding: em(10) em(6);
+	input {
+	  margin-right: em(20);
+	}
+  }
+  li:hover {
+	background: $color-darker-grey;
+  }
+  a {
+	color: $text-grey4;
+	font-size: 12px;
+	text-decoration: none;
+  }
+}
+
+
+/* Accordion */
+
+.accordion {
+  margin-bottom: 50px;
+  position: relative;
+  top: -8px;
+}
+
+.storedetails {
+  div {
+	float: left;
+	width: 150px;
+  }
+  .accordion-header {
+	position: relative;
+	margin-bottom: 0;
+	width: 100%;
+	background: url("/wcsstore/argos/en_GB/images/storelocator/Black-Pointer.png") 13px center no-repeat #FFFFFF;
+	text-indent: 30px;
+	cursor: pointer;
+	p {
+	  position: relative;
+	  color: #000000;
+	  text-decoration: none;
+	  padding: 10px;
+	  float: left;
+	  font-size: 1.2em;
+	  display: inline;
+	}
+	span {
+	  float: left;
+	}
+	&:hover {
+	  background: url("/wcsstore/argos/en_GB/images/storelocator/Black-Pointer.png") 13px center no-repeat #8D8D8D;
+	  text-decoration: none;
+	  color: $color-white;
+	  p, span {
+		color: $color-white;
+	  }
+	}
+	&.active {
+	  background-color: #8D8D8D;
+	  color: $color-white;
+	  p, span {
+		color: $color-white;
+	  }
+	}
+	span.icon-chevron {
+	  position: absolute;
+	  right: em(10);
+	  top: em(12);
+	}
+	&.active span.icon-chevron {
+
+	}
+	.distance {
+	  float: right;
+	  margin-top: 8px;
+	  padding-right: 60px;
+	  p {
+		top: 0;
+		padding: 0;
+	  }
+	}
+	.icon-extra,
+	.icon-accordion-pointer {
+	  position: relative;
+	  top: em(6);
+	}
+	.icon-accordion-pointer {
+	  left: em(10);
+	  top: em(5);
+	}
+  }
+  .accordion-wrapper {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	width: 100%;
+	display: block;
+	padding: 10px 50px;
+	background: #FFFFFF;
+	.align-right {
+	  text-align: right;
+	}
+  }
+  height: 100%;
+  clear: both;
+  border: 1px solid #EFEFEF;
+  border-left: 0;
+  border-right: 0;
+  .cta-links {
+	margin: 20px 0 0 50px;
+	.flat-btn {
+	  display: block;
+	  width: 150px;
+	  background-color: #8d8d8d;
+	  text-align: center;
+	  color: #FFFFFF;
+	  padding: 10px;
+	  font-size: 1.2em;
+	  font-weight: bold;
+	}
+  }
+}
+
+.storeheader {
+  border-top: 1px solid #999;
+  margin: -10px 0 0;
+  padding-bottom: 10px;
+  height: 1.7em;
+}
+
+.storedetails {
+  .button {
+	font-size: em(18);
+	text-align: center;
+	width: em(75);
+  }
+  .tertiary {
+	margin-bottom: em(10);
+	width: em(80);
+  }
+  div {
+	&.storeaddress {
+	  width: 226px;
+	  span a {
+		font-size: 1.2em;
+	  }
+	}
+	&.distance p {
+	  font-weight: bold;
+	}
+  }
+  .storephonenumber {
+	width: 220px;
+  }
+  .opening-hours {
+	p {
+	  float: right;
+	}
+	ul {
+	  padding: 0;
+	  li {
+		float: right;
+		font-size: 1.2em;
+		list-style: none;
+		margin: 0;
+	  }
+	  li.active {
+		padding: 4px;
+		padding-left: 5px;
+		margin-right: -5px;
+		border: 1px solid #222222;
+		border-radius: 4px;
+		font-weight: bold;
+	  }
+	}
+  }
+  div {
+	dl dt {
+	  float: left;
+	  width: 50px;
+	  font-size: 1.2em;
+	}
+	p {
+	  font-weight: normal;
+	  margin: 0;
+	  font-size: 1.2em;
+	}
+	span {
+	  font-weight: 800;
+	}
+	img {
+	  display: block;
+	  margin: 6px 0 8px 0;
+	}
+  }
+}
+
+.storeheader div p {
+  font-weight: bold;
+}
+
+.argos-store-information {
+  background: none repeat scroll 0 0 #fff;
+  float: left;
+  height: auto;
+  margin-bottom: 20px;
+  margin-top: 20px;
+  width: 100%;
+  .button {
+	clear: both;
+	margin-bottom: em(10);
+	text-align: center;
+	width: 86%;
+  }
+  h2 {
+	font-size: 1em;
+	color: #000;
+	font-weight: 800;
+	text-transform: uppercase;
+	line-height: 0;
+	margin: 20px 0 15px 0;
+  }
+  .store-welcome-message {
+	font-size: 1.5em;
+	font-weight: normal;
+	color: #000;
+	padding-left: 40px;
+	margin-top: 10px;
+	height: auto;
+	height: initial;
+	line-height: inherit;
+	span {
+	  background-image: none;
+	  display: inline;
+	  position: relative;
+	}
+	.argos-storename {
+	  font-size: 2em;
+	  font-weight: bold;
+	  display: block;
+	  margin-top: 8px;
+	}
+  }
+  .argos-storename {
+	width: 200px;
+  }
+  .argos-storename-miles {
+	width: 200px;
+	bottom: 24px;
+	float: right;
+	font-size: 12px;
+	position: relative;
+	right: 20px;
+	text-align: right;
+  }
+  .store-map {
+	float: left;
+	clear: left;
+	width: 475px;
+	height: 600px;
+  }
+  .store-details {
+	float: right;
+	clear: right;
+	width: 475px;
+	height: 600px;
+	font-size: 1em;
+	dt, dd {
+	  float: right;
+	  margin-right: 40px;
+	  font-size: 1.2em;
+	}
+	.icon-map-pointer {
+	  float: left;
+	  position: relative;
+	  top: em(37);
+	}
+  }
+  .store-address {
+	float: left;
+	clear: left;
+	width: 220px;
+	font-size: 1.2em;
+  }
+  .store-hours {
+	float: right;
+	clear: right;
+	width: 140px;
+	font-size: 1.2em;
+	padding-right: 40px;
+	margin-bottom: 40px;
+	text-align: right;
+	ul {
+	  padding: 0;
+	  li {
+		font-size: em(10);
+		list-style: none;
+		margin-bottom: em(1);
+		padding: 0;
+	  }
+	  li.active {
+		padding: 3px;
+		border: 1px solid #333333;
+		border-radius: 5px;
+		margin-right: -5px;
+		font-weight: bold;
+	  }
+	}
+	span {
+	  font-size: 1.2em;
+	}
+  }
+  .store-address li {
+	font-size: 1.2em;
+  }
+  .store-hours-disclaimer {
+	width: 465px;
+	clear: both;
+	border-top: 1px solid #CCC;
+	padding-top: 10px;
+	p {
+	  font-size: em(10);
+	}
+  }
+}

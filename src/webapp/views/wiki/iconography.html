@@ -1,0 +1,103 @@
+{% extends '../layout.html' %}
+
+{% block title %}Wiki > Iconography{% endblock %}
+
+{% block css %}
+
+	{% parent %}
+
+	<style type="text/css">
+
+		.iconography-content {
+			width: 100%;
+			display: table;
+			margin-bottom: 20px;
+		}
+
+		.iconography-content div {
+			margin: 20px;
+			float: left;
+			height: 80px;
+			width: 120px;
+
+		 }
+
+		.iconography-content .legend {
+			display: block;
+			margin-top: 10px;
+		}
+
+	</style>
+
+{% endblock %}
+
+{% set icons = {
+	"icon-close": "Close",
+	"icon-search": "Search",
+	"icon-trolley": "Trolley",
+	"icon-location": "Location",
+	"icon-refine": "Refine",
+	"icon-refresh": "Refresh",
+	"icon-sort-by": "Sort by...",
+	"icon-reset": "Reset",
+	"icon-send": "Send",
+	"icon-share": "Share",
+	"icon-home-delivery": "Home Delivery",
+	"icon-store-collection": "Store Collection",
+	"icon-zoom": "Zoom",
+	"icon-add-to-wishlist": "Add to Wishlist",
+	"icon-remove-from-wishlist": "Remove from Wishlist",
+	"icon-chevron": "Select chevron",
+	"icon-cross": "Cross",
+	"icon-tick": "Tick",
+	"icon-delivery-slot": "Delivery Slot",
+	"icon-settings": "Settings / Options",
+	"icon-delivery-instructions": "Delivery Instructions",
+	"icon-home-delivery-small": "Home Delivery",
+	"icon-two-man-delivery": "Two-man Delivery",
+	"icon-order-summary": "Order Summary",
+	"icon-details": "Details",
+	"icon-more-info": "More info",
+	"icon-plus": "Plus",
+	"icon-equals": "Equals",
+	"icon-store-locator-search": "Store Locator Search",
+	"icon-chevron-up": "Accordion Chevron Up",
+	"icon-chevron-down": "Accordion Chevron Down",
+	"icon-accordion-pointer": "Accordion Pointer",
+	"icon-extra": "Argos Extra",
+	"icon-argos-logo": "Argos Logo",
+	"icon-answer-bubble": "Answer bubble for BV",
+	"icon-user": "User",
+	"icon-answer-bubble": "Answer Bubble",
+	"icon-question-bubble": "Question Bubble",
+	"icon-thumbs-up": "Thumbs up",
+	"icon-thumbs-down": "Thumbs Down",
+	"icon-map-pointer": "Map Pointer",
+	"icon-orderlargeitems" : "Order Large Items",
+	"icon-ordersmallitems" : "Order Small Items",
+	"icon-ordertimes" : "Order Times",
+	"icon-orderhomedelivery" : "Order Home Delivery",
+	"icon-ordersummary" : "Order Summary",
+} %}
+
+
+{% block content %}
+
+  <div class="content container">
+
+		<hr />
+		<h2>Iconography</h2>
+		<hr />
+
+		<div class="iconography-content">
+
+			{% for text in icons %}
+				<div>
+					<span class="{{ loop.key }}"></span><span class="legend">{{ text }}</span>
+				</div>
+			{% endfor %}
+
+		</div>
+  </div>
+
+{% endblock content %}

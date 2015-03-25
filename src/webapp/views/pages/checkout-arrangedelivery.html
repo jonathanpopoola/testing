@@ -1,0 +1,218 @@
+{% extends '../layout.html' %}
+
+{% set customer = data.customer %}
+{% set order = data.order %}
+
+{% block content %}
+
+<div class="content container">
+
+	<div class="row order-summary">
+
+		<div class="columns four">
+			<a href="/page/tlp/1" class="button">Back</a>
+		</div>
+
+		<div class="columns four">
+			<h2>Checkout</h2>
+		</div>
+
+		<div class="columns three right">
+			<p>Items: <strong>{{order.totalItems}}</strong> Total: <strong>{{order.price.total | currency}}</strong></p>
+		</div>
+
+	</div>
+
+	<div class="row panel">
+
+		<h3><span class="icon-orderhomedelivery"></span> Delivery address</h3>
+
+		<hr />
+
+		<div class="columns twelve">
+
+			<p>
+				<strong>
+					{{customer.title}} {{customer.firstName}} {{customer.lastName}}<br />
+					{{customer.billing_addressLine1}}, {{customer.billing_addressLine2}}<br/>
+					{{customer.billing_addressLine3}}<br/>
+					{{customer.billing_postcode}}
+				</strong>
+			</p>
+
+			<a href="#" class="button">Change</a>
+
+		</div>
+
+	</div>
+
+	<div class="row panel">
+
+		<h3><span class="icon-ordertimes"></span> Arrange delivery</h3>
+
+		<div class="columns twelve">
+
+			<p>Your order has been split into {{order.deliveries}} deliveries</p>
+
+		</div>
+
+	</div>
+
+	{% if order.smallItems %}
+	<div class="row panel">
+
+		<h3><span class="icon-ordersmallitems"></span> Delivery 1: Smaller item(s)</h3>
+
+		<hr />
+
+		<div class="columns twelve">
+
+			<div class="row">
+
+				<div class="columns four">
+
+					{% for product in order.smallItems %}
+						<div class="row product">
+							<div class="columns three">
+								<img src="{{product.image}}" />
+							</div>
+							<div class="columns nine">
+								<p>{{product.title}}</p>
+								<p><strong>Qty X</strong></p>
+								<span class="price small">{{product.price.standard}}</span>
+							</div>
+						</div>
+					{% endfor %}
+
+				</div>
+
+				<div class="columns eight">
+
+					{% include "../modules/deliverySlotsPicker.html" %}
+
+				</div>
+
+			</div>
+
+		</div>
+
+	</div>
+	{% endif %}
+
+	{% if order.largeItems %}
+	<div class="row panel">
+
+		<h3><span class="icon-orderlargeitems"></span> Delivery 2: Larger item(s)</h3>
+
+		<hr />
+
+		<div class="columns twelve">
+
+			<div class="row">
+
+				<div class="columns four">
+
+					{% for product in order.largeItems %}
+						<div class="row product">
+							<div class="columns three">
+								<img src="{{product.image}}" />
+							</div>
+							<div class="columns nine">
+								<p>{{product.title}}</p>
+								<p><strong>Qty X</strong></p>
+								<span class="price small">{{product.price.standard}}</span>
+							</div>
+						</div>
+					{% endfor %}
+
+				</div>
+
+				<div class="columns eight">
+
+					{% include "../modules/deliverySlotsPicker.html" %}
+
+				</div>
+
+			</div>
+
+		</div>
+
+	</div>
+
+	{% endif %}
+
+	{% if order.otherItems %}
+	<div class="row panel">
+
+		<h3><span class="icon-orderlargeitems"></span> Delivery 3: Other item(s)</h3>
+
+		<hr />
+
+		<div class="columns twelve">
+
+			<div class="row">
+
+				<div class="columns four">
+
+					{% for product in order.otherItems %}
+						<div class="row product">
+							<div class="columns three">
+								<img src="{{product.image}}" />
+							</div>
+							<div class="columns nine">
+								<p>{{product.title}}</p>
+								<p><strong>Qty X</strong></p>
+								<span class="price small">{{product.price.standard}}</span>
+							</div>
+						</div>
+					{% endfor %}
+
+				</div>
+
+				<div class="columns eight">
+
+					<p>We'll collect your old item when delivering your new one</p>
+
+				</div>
+
+			</div>
+
+		</div>
+
+	</div>
+
+	{% endif %}
+
+	<div class="row panel">
+
+		<h3><span class="icon-ordersummary"></span> Your total</h3>
+
+		<hr />
+
+		<div class="columns eight">&nbsp;</div>
+
+		<div class="columns four">
+			<p>Subtotal: {{order.price.subtotal | currency}}</p>
+			<p>Delivery charge: {{order.price.delivery | currency}}</p>
+			<p class="salehighlight">Promotional discount: <span class="right">-{{order.price.discount | currency}}</span></p>
+			<hr />
+			<p>Total: <span class="price small">{{order.price.total | currency}}</span></p>
+		</div>
+
+		<hr />
+
+		<div class="columns eight">&nbsp;</div>
+
+		<div class="columns four">
+			<button class="button primary">Continue</button>
+		</div>
+
+
+	</div>
+
+
+	{% include "../modules/homeDeliveryAndStorePickupInfo.html" %}
+
+</div>
+
+{% endblock content %}

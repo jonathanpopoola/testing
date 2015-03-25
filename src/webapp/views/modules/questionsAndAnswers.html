@@ -1,0 +1,76 @@
+<section class="row questions-and-answers">
+	
+	<div class="twelve columns">
+		<div>
+			<h4 class="sub-heading">{{ data.questionsAndAnswers.title }}</h4>
+			
+			<span>(44 Questions | 41 Answers)</span>
+			
+			<div>
+				<form class="generic">
+					<div class="dropdown">
+						<select>
+							<option value="" selected="selected">Sort by</option>
+							<option value="">Newest questions</option>
+							<option value="">Oldest questions</option>
+							<option value="">Newest answers</option>
+							<option value="">Oldest answers</option>
+							<option value="">Most helpful answers</option>
+							<option value="">Least helpful answers</option>
+							<option value="">Most helpful questions</option>
+							<option value="">Least helpful questions</option>
+							<option value="">Most answers</option>
+							<option value="">Answers needed</option>
+						</select>
+					</div>
+				</form>
+			</div>
+		</div>
+
+		<article>
+			<header>
+				<h1><span class="icon-question-bubble"></span>does it monitor swimming?</h1>
+				<button>Hide -</button>
+			</header>
+			
+			<div class="question">
+				<div class="author">
+					<dl>
+						<dt><span class="icon-user"></span>Lewman</dt>
+						<dd>From: Canterbury</dd>
+						<dd>Age: 65 or over</dd>
+						<dd>Gender: Male</dd>
+					</dl>
+					
+					<div class="answer-button"><a class="button secondary" href="#">Answer this question</a></div>
+				</div>
+				
+				<div class="question-age">5 days ago</div>
+				{% include "../modules/isHelpful.html" %}
+				<h2><span class="icon-answer-bubble"></span>1 answer(s)</h2>
+			</div>
+			
+			<div class="answer">
+				<address class="author"><span class="icon-user"></span>Katie@Argos</address>
+				
+				<div class="answer-header clearfix">
+					{% include "../modules/isHelpful.html" %}
+					<div class="author-type"><span class="icon-argos-logo"></span>Technical support</div>
+				</div>
+				
+				<div class="answer-body">
+					<time>2 days ago</time>
+					<p>
+						Hi,
+						<br>
+						<br>The Fitbit Charge Large Activity and Sleep Wristband is not swim proof.
+						<br>
+						<br>Thanks for using Argos Q&amp;A.
+					</p>
+				</div>
+				
+			</div>
+		</article>
+	</div>
+
+</section>

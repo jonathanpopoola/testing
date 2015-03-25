@@ -1,0 +1,76 @@
+{% extends '../layout.html' %}
+
+{% block title %}Wiki > Panels{% endblock %}
+
+{% block content %}
+
+  <div class="content container">
+
+
+		<hr />
+		<h2>Panels System</h2>
+		<p>Example useage in <a href="#">Arrange Delivery</a>, allows a white panel as per production with a heading and columns as their content.</p>
+		<p><em>Note: These panels are for <strong>production</strong> only, and therefore only work (visually) on the grey background of this page</em></p>
+		<hr />
+
+
+		<div class="row panel">
+
+			<h3>Heading 3</h3>
+			<p>Sub heading text can go here if required</p>
+			<hr />
+
+			<div class="columns four">
+
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur dictum ut nunc id cursus. Vestibulum elementum ac sem eu lacinia.</p>
+
+			</div>
+
+			<div class="columns four">
+
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur dictum ut nunc id cursus. Vestibulum elementum ac sem eu lacinia.</p>
+
+			</div>
+
+			<div class="columns four right">
+
+				<p>You can also right align content with a class of <em>right</em>.</p>
+
+			</div>
+
+		</div>
+
+
+		<div class="row panel">
+
+			<h3>Heading 3</h3>
+			<hr />
+
+			<div class="columns twelve">
+
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur dictum ut nunc id cursus. Vestibulum elementum ac sem eu lacinia.</p>
+
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur dictum ut nunc id cursus. Vestibulum elementum ac sem eu lacinia.</p>
+
+			</div>
+
+		</div>
+
+
+		<div class="row panel">
+
+			<div class="columns twelve">
+
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur dictum ut nunc id cursus. Vestibulum elementum ac sem eu lacinia.</p>
+
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur dictum ut nunc id cursus. Vestibulum elementum ac sem eu lacinia.</p>
+
+			</div>
+
+		</div>
+
+
+
+  </div>
+
+{% endblock content %}

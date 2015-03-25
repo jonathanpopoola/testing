@@ -1,0 +1,97 @@
+{% macro ratingBars( rating, outOf ) %}
+	{% autoescape false %}
+	<span class="rating-block"><span{{ rating | getRatingClass(1) }}></span></span>
+	<span class="rating-block"><span{{ rating | getRatingClass(2) }}></span></span>
+	<span class="rating-block"><span{{ rating | getRatingClass(3) }}></span></span>
+	<span class="rating-block"><span{{ rating | getRatingClass(4) }}></span></span>
+	<span class="rating-block"><span{{ rating | getRatingClass(5) }}></span></span>
+	{% endautoescape %}
+	{{ rating }}<span class="out-of">/{{ outOf }}</span>
+{% endmacro %}
+
+
+<p class="rating-overall">
+	Overall rating <span class="star-rating">{{ average.overallRating }}<span class="out-of">/{{ outOf }}</span></span>
+	<a href="#" class="icon-more-info"><span class="accessibility">More info</span></a>
+</p>
+
+<ul class="rating-bars overall-ratings">
+{% for rating in average.ratings %}
+
+	<li>
+		<h5>{{ rating.name }}</h5>
+		{{ ratingBars( rating.rating, outOf ) }}
+	</li>
+
+{% endfor %}
+</ul>
+
+<p>
+	{{ average.wouldRecommendPercentage }}% would recommend to a friend
+</p>
+
+<hr>
+
+<ul class="customer-reviews">
+
+	{% for review in items %}
+
+		{% set user = review.user %}
+
+		<li>
+
+			<div class="row">
+
+				<div class="three columns">
+					<span class="star-rating">{{ review.overallRating }}<span class="out-of">/{{ outOf }}</span></span>
+
+					<dl class="rating-bars">
+					{% for rating in review.ratings %}
+						<dt class="rating-title">{{ rating.name }}</dt>
+						<dd>
+							{{ ratingBars( rating.rating, outOf ) }}
+						</dd>
+					{% endfor %}
+					</dl>
+				</div>
+
+				<div class="six columns">
+					<p>{{ review.date | date('jS \o\f F') }}</p>
+					{% if review.title %}<h5 class="review-title">{{ review.title }}</h5>{% endif %}
+					<p>
+						{{ review.description }}
+					</p>
+					{% if review.wouldRecommend %}
+						<p class="would-recommend"><span class="icon-tick"></span>Yes, I recommend this product.</p>
+					{% endif %}
+				</div>
+
+				<div class="three columns">
+					<dl class="user-details">
+						<dt class="icon-user"><span class="accessibility">Username:</span></dt>
+						<dd class="username">{{ user.username }}</dd>
+						<dt>From:</dt>
+						<dd>{{ user.location }}</dd>
+						<dt>Age:</dt>
+						<dd>{{ user.age }}</dd>
+						<dt>Gender:</dt>
+						<dd>{{ user.gender }}</dd>
+					</dl>
+				</div>
+
+			</div>
+
+			<div class="row">
+				<div class="three columns"></div>
+				<div class="six columns voting">
+					Helpful?
+					<a href="#" class="icon-thumbs-up"><span class="accessibility">Yes</span></a>
+					<span class="yes-count">2</span>
+					<a href="#" class="icon-thumbs-down"><span class="accessibility">No</span></a>
+					<span class="no-count">0</span>
+				</div>
+			</div>
+		</li>
+
+	{% endfor %}
+</ul>

@@ -1,0 +1,38 @@
+{% extends '../layout.html' %}
+
+{% block content %}
+
+  <div class="content">
+
+		{% include "../modules/carousel.html" data.carousel %}
+
+		{% include "../modules/promoGrid.html" data.promoGrid %}
+
+
+
+	  <div class="content product-carousel-container"></div>
+
+
+		<div class="container section">
+			<div class="row">
+				<div class="twelve columns">
+					<h2>Recommendation block</h2>
+					{% include "../modules/recommendations.html" data.recommendations %}
+				</div>
+			</div>
+		</div>
+
+
+
+		<div class="container">
+
+			<article class="columns twelve">
+				<p>Find everything you need for Christmas presents at Argos. Shop for the latest toys, including My Friend Cayla, and Disney Princess dolls like Elsa from Frozen. Find Transformers, Xeno, Loom Bands, Nerf and the Teksta Dinosaur robot toys. And LEGO too of course. Get the latest gadgets, cameras from Nikon, tablets and laptops including Chromebook, Nexus,iPad Mini Retina, iPad Air 2, iPad Mini 3, Kindle Fire HDX, and the Samsung Galaxy. Get your groove on with great quality sound from Beats and Bose.</p>
+				<p>Get cosy in front of our 4K TV,3D TV and affordable smart TVs this winter, and play the latest games on the PS4 and Xbox One, and kids' favourites Disney Infinity 2 and Skylanders Trap Team. Check out our sofas,bedroom,furniture,beds,wardrobes,coffee tables & dining tables. For home accessories and furnishings, check out our selection of lighting, curtains,rugs & bedding from great brands like Habitat and Heart of House.</p>
+				<p>Get ready for the January sale at Argos, starting 25th December 2014!</p>
+			</article>
+
+		</div>
+  </div>
+
+{% endblock content %}

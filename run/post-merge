@@ -1,0 +1,18 @@
+#!/bin/sh
+#
+# An example hook script to prepare a packed repository for use over
+# dumb transports.
+#
+# To enable this hook, rename this file to "post-update".
+
+#currentpwd=$(pwd)
+#echo "PWD = $currentpwd"
+
+cd run/
+
+if [ -f update.sh ]; then
+	echo "Attempting restart and update of Node from GIT hook..."
+	./update.sh
+else
+	echo "Unable to update Node as script not found"
+fi

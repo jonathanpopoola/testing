@@ -1,0 +1,226 @@
+.main-footer{
+	padding-bottom:30px;
+
+
+	section.footer-nav{
+		background:#f0f0f0;
+		clear:both;
+		text-align: center;
+		display: inline-block;
+		width:100%;
+		margin-bottom:1em;
+
+		nav{
+			text-align: left;
+			margin-top: 20px;
+			margin-bottom: 20px;
+
+			h6{
+				font-family: $argosBold;
+				font-size:2em;
+				margin-bottom:1.3em;
+			}
+			ul{
+				padding:0;
+
+				li{
+					margin:8px 0;
+					list-style: none;
+
+					a{
+						font-family: $argosBook;
+						font-size:1.1em;
+						color:$text-grey1;
+						text-decoration: none;
+					}
+				}
+			}
+		}
+
+	}
+
+	.footer-nav-devices, .footer-nav-social, .footer-nav-policies-sitemap, .footer-nav-help{
+		ul, .footer-copyright{
+
+			li{
+				display: inline-block;
+			}
+		}
+
+	}
+
+	.footer-nav-devices.columns{
+		margin-left:0;
+
+		li{
+			font-size:1.3em;
+
+
+		}
+
+		.ico-argos{
+			position:relative;
+			padding:7px 0 0 35px;
+			margin-right:20px;
+			height:20px;
+
+			&:before{
+				content: '';
+				position:absolute;
+				top:0;
+				left:0;
+				width:31px;
+				height:26px;
+				overflow: hidden;
+				display: block;
+				background: $sprite 0 0;
+			}
+
+
+			a{
+				margin-right: 20px;
+				position:relative;
+
+				&:after{
+					position:absolute;
+					right: -12px;
+					top:0;
+					content: ' | ';
+				}
+
+				&:last-child:after{
+					content: '';
+				}
+			}
+		}
+
+		.ico-app{
+			position:relative;
+			padding:7px 0 0 21px;
+			height:23px;
+
+			&:before{
+				content: '';
+				position:absolute;
+				top:0px;
+				left:0;
+				width:17px;
+				height:29px;
+				overflow: hidden;
+				display: block;
+				background: $sprite -33px 0;
+			}
+		}
+
+	}
+
+	.footer-nav-social.five.columns{
+		text-align: right;
+		width:41.66667%;
+
+		li{
+			margin-left:15px;
+		}
+
+		.ico-youtube a,
+		.ico-facebook a,
+		.ico-twitter a,
+		.ico-google a{
+			overflow: hidden;
+			display: block;
+			overflow:hidden;
+			position: relative;
+			text-indent: 5000px;
+			width:48px;
+			height:21px;
+			background: $sprite -51px 0;
+		}
+
+		.ico-facebook a{
+			width:26px;
+			height:26px;
+			background-position:-28px -30px;
+		}
+
+		.ico-twitter a{
+			width:27px;
+			height:23px;
+			background-position:-0px -60px;
+		}
+
+		.ico-google a{
+			width:26px;
+			height:27px;
+			background-position:-0px -30px;
+		}
+
+	}
+
+	.footer-nav-help{
+
+		border-top: 1px solid #ccc;
+		margin-top: 18px;
+		padding:14px 8px 9px;
+
+		ul{
+
+			li{
+				height:40px;
+
+				&.title{
+					font-size:2em;
+					font-family: $argosBold;
+					overflow: visible;
+					white-space: nowrap;
+					margin-top: 0.5em;
+				}
+
+				&.title.two{
+					margin-left:-0.7em;
+					width:15.5%;
+
+				}
+
+				a.tertiary{
+					font-size:0.7em;
+				}
+			}
+		}
+	}
+
+	.footer-nav-policies-sitemap.columns{
+		margin-left:0;
+
+		li{
+			font-size:1.3em;
+		}
+
+		a{
+			margin-right: 20px;
+			position:relative;
+
+			&:after{
+				position:absolute;
+				right: -12px;
+				top:0;
+				content: ' | ';
+			}
+		}
+
+		li:last-child a{
+			&:after{
+				content: '';
+			}
+		}
+	}
+
+	.footer-copyright.five.columns{
+		p{
+			text-align: right;
+			margin:0;
+			font-size:1.3em;
+		}
+		width:41.66667%;
+	}
+}
+

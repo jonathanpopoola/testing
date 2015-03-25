@@ -1,0 +1,24 @@
+<!-- start -->
+<div class="quickview">
+	<div class="media"><img alt="{{ data.quickview.title }} " src="{{ data.quickview.image }}" /></div><!-- scene 7 place holder -->
+	<div class="details">
+		<div class="{{data.quickview.flag[1]}}">{{data.quickview.flag[0]}}</div>
+		<a href="{{ data.quickview.url }}" class="title">{{ data.quickview.title }}</a>
+		<span class="product-id">{{ data.quickview.productId }}</span>
+		<p class="price">&pound;{{  data.quickview.price.standard }}</p>
+		<p class="pricewas">was &pound;{{ data.quickview.price.was }}</p>
+		<p class="pricesale">save &pound;{{ data.quickview.price.save }}</p>
+		<p class="specialoffercount">{{ data.quickview.specialoffercount }}</p>
+		<div class="delivery-information">
+			<span class="delivery-status">{{ data.quickview.deliveryStatus }}</span>
+			<span class="delivery-method">{{ data.quickview.deliveryMethod }}</span>
+		</div>
+		<p class="information">{{ data.quickview.information}}</p>
+		<a class="button tertiary" href="{{ data.quickview.url }}">Full Details</a>
+		<input class="button primary" type="submit" value="Buy or Reserve" />
+	</div>
+
+</div>
+
+<!-- finish -->
+

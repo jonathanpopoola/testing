@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>{% block title %}Hello Argos{% endblock title %}</title>
+		<!--[if lt IE 9]>
+			<script src="public/bower_components/html5shiv/dist/html5shiv.js"></script>
+		<![endif]-->
+		<script>
+
+			//add a js/svg class to the document so that we can apply specific styles - such as hiding disclosed items.
+			//this js should be before the stylesheets, so the it adds the class before the CSS gets applied, saving a reflow/repaint
+
+			(function(){
+
+				var docElem = document.documentElement || document.body,
+					className = 'js';
+
+				if( docElem ){
+
+					if( document.implementation && document.implementation.hasFeature && document.implementation.hasFeature("http://www.w3.org/TR/SVG11/feature#Image", "1.1") ){
+	                	className += " svg";
+	                }
+
+					if( docElem.className.length > 0 ){
+
+						className = ' ' + className;
+					}
+
+					docElem.className += className;
+				}
+
+			}());
+		</script>
+
+		{% block css %}
+			<!-- build:css(dist/temp/src) /public/css/style.min.css -->
+				<link rel="stylesheet" href="/public/css/base.css">
+			<!-- endbuild -->
+		{% endblock css %}
+	</head>
+	<body data-page="{{name}}" class="{{name}}">
+
+		<div class="site-container">
+
+			{% include "globals/header.html" %}
+
+			{% block content %}
+			{% endblock content %}
+
+			{% include "globals/footer.html" %}
+
+			{% block script %}
+				<!-- build:js(dist/temp/src) /public/js/script.min.js -->
+				<script src="/public/js/vendor.min.js"></script>
+				<script src="/public/js/all.min.js"></script>
+				<!-- endbuild -->
+			{% endblock script %}
+
+			{% block pageScript %}
+			{% endblock pageScript %}
+
+		</div>
+	</body>
+</html>

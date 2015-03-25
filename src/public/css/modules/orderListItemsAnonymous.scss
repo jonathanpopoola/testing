@@ -1,0 +1,137 @@
+body.tlp,
+body.panels{
+	background:#e8e8e8;
+	}
+
+.wrapper-order-list-item-anonymous{
+	margin:0;
+	padding:0;
+	
+	form{
+		margin:0;
+		}
+	}
+	
+table.order-item-anonymous{
+	border-right:1px solid $lighter-grey;
+	tr{
+		border-bottom:1px solid $lighter-grey;
+		th{
+			border-right:1px solid $lighter-grey;
+			font-size:em(16);
+			font-weight:bold;
+			color:$darker-grey;
+			input, a{
+				font-size:em(10);
+				}
+			}
+		th, td{
+			text-align:left;
+			margin:0;
+			vertical-align:top;
+			padding:em(5) 0 em(5) 0;
+			&.description{
+				padding-left:em(20);
+				}
+				&.qty{
+					width:8%;
+					text-align:center;
+					.select, .btn-remove{
+						display:block;
+						width:100%;
+						margin:0;
+						padding:0;
+						font-size:100%;
+						}
+					.btn-remove{
+						margin:0;
+						}
+					}
+				&.price{
+					width:8%;
+					text-align:right;
+					padding-right:em(20)
+					}	
+				}
+			td{
+				padding:em(30) 0 em(17) 0;
+				&.description{
+					.image{
+						float:left;
+						display:block;
+						margin:0 em(10) 0 0;
+						padding:0;
+						width:20%;
+					}
+					.title{
+						float:left;
+						display:block;
+						margin:0;
+						padding:0;
+						width:75%;
+						line-height:normal;
+						a{
+							text-decoration:none;
+							&:hover,
+							&:focus{
+								text-decoration:underline;
+							}
+						}
+					}
+					.availability{
+						float:right;
+						li{
+							list-style:none;
+							display:inline-block;
+							position:relative;
+							margin:0;
+							padding:0;
+						}
+					}
+				}
+				&.qty{
+		.dropdown{
+			display: inline-block;
+			width: em( 50, 10 );
+			margin-bottom: 0;
+
+			select {
+				width: em( 72, 14 );
+				font-size:100%;
+			}
+
+						}
+						}
+				}
+			}
+		}
+
+.container .columns table.item-total-anonymous{
+	.row{
+		float:right;
+		vertical-align:top;
+		border:0;
+		th, td{
+			text-align:right;
+			border:0;
+			float:left;
+			display:inline-block;
+			width:100px;
+			vertical-align:top;
+			margin:0;
+			padding:0;
+			line-height:normal;
+			font-size:em(14);
+			font-weight:bold;
+		}
+		td{
+			margin:0 em(24) 0 0;
+		}
+		.title{
+			width:400px;
+			margin:0 em(20) 0 0;
+			
+			}
+	}
+}
+	

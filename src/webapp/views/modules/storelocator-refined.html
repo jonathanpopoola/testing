@@ -1,0 +1,19 @@
+<form>
+	<ul class="store-areas">
+		<h4>We found <strong>
+			{% for product in products %}
+				{{product.count}}
+			{% endfor %}
+		</strong> towns with the name london. Please select the town/area you're interested in and click 'Continue'.</h4>
+		{% for item in items %}
+
+		<li>
+			<input type="radio" name="qasSearchTerm" value="{{item.value}}" checked="checked" />
+			<label>{{item.title}}</label>
+		</li>
+
+		{% endfor %}
+	</ul>
+	<!--input type="button" class="button primary continue" value="Continue" / this should be used but using an anchor for demo purposes -->
+	<a href="/page/storelocator-details/1" class="button primary continue">Continue</a>
+</form>

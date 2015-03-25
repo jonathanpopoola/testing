@@ -1,0 +1,70 @@
+//urls
+$url_0: url("/public/img/spritesheet.png");
+
+.product-carousel-container {
+	position: relative;
+	left: 40px;
+	margin-bottom: 70px;
+
+	li.recommendation-item{
+		display: inline;
+	}
+
+	.navigation {
+		background-repeat: no-repeat;
+		cursor: pointer;
+		height: 56px;
+		position: absolute;
+		top: 133px;
+		width: 20px;
+		&.left {
+			background-image: $url_0;
+			left: 930px;
+			background-position: -80px -145px;
+		}
+		&.right {
+			background-image: $url_0;
+			left: -30px;
+			background-position: -59px -145px;
+		}
+	}
+	.carrier {
+		left: 0;
+		>div {
+			position: relative;
+			left: 30px;
+		}
+	}
+	.screen {
+		position: relative;
+		border: 1px solid $color-red;
+		height: 350px;
+		margin: 0 auto;
+		overflow: hidden;
+		padding: 10px 30px;
+	}
+	.tracker-container {
+		height: 20px;
+		left: 16px;
+		margin: 40px auto;
+		position: relative;
+		width: auto;
+	}
+	.tracker {
+		border: 1px solid $color-grey4;
+		float: right;
+		height: 7px;
+		margin-right: 6px;
+		width: 7px;
+		&.active {
+			background: $color-red;
+			border: 1px solid $color-red;
+		}
+	}
+	.item-container {
+		display: block;
+		height: 480px;
+		float: left;
+		width: 950px;
+	}
+}

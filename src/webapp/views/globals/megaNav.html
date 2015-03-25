@@ -1,0 +1,35 @@
+<nav class="mega-nav">
+	<ul>
+	{% spaceless %}
+		{% for category in data.megaNav %}
+		<li>
+			{% if loop.key %}<a href="/page/plp/1">{{ loop.key }}</a>{% endif %}
+			<section>
+				{% for subCategory in category %}
+				{% if subCategory.highlight %}
+				<dl class="highlight-column">
+				{% else %}
+				<dl>
+				{% endif %}
+					<dt>{% if loop.key %}<a href="/page/plp/1">{{ loop.key }}</a>{% endif %}</dt>
+					{% for item in subCategory.items %}
+						<dd>
+							<a href="/page/plp/1">
+								{% if item.image %}
+									<img src="{{ item.image }}" alt="">
+								{% endif %}
+								{{item.text}}
+							</a>
+						</dd>
+					{% endfor %}
+				</dl>
+				{% endfor %}
+			</section>
+		</li>
+		{% endfor %}
+		<li class="mega-nav-highlight">
+			<a href="/page/plp/1">NEW RANGES</a>
+		</li>
+	{% endspaceless %}
+	</ul>
+</nav>

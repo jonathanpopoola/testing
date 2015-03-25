@@ -1,0 +1,93 @@
+{% extends '../layout.html' %}
+
+{% block content %}
+
+<div class="content container">
+
+	<div class="row panel">
+
+		<div class="columns twelve">
+
+			<h2>Join Argos.co.uk</h2>
+			<p>Keep up to date with all the latest offers and promotions, shop with 1 Click Reserve, manage your 3 favourite stores and keep your address book up to date.</p>
+
+			<hr />
+
+			<form class="generic">
+
+				<h3 class="">Login details</h3>
+                
+                <p class="info" >All fields marked with a <span class="required">*</span> are mandatory</p>
+
+		        <label class="field" for="example7"><span class="required">*</span> Email address:</label>
+				<input type="text" id="example7"><br>
+
+				<label class="field" for="example8"><span class="required">*</span> Confirm email address:</label>
+				<input type="text" id="example8"><br>
+
+				<label class="field" for="example9"><span class="required">*</span> Password:</label>
+				<input type="text" id="example9"><br>
+
+				<label class="field" for="example10"><span class="required">*</span> Confirm password:</label>
+				<input type="text" id="example10"><br>
+
+				<div class="checkboxfields">
+					<label class="field">&nbsp;</label>
+			        <input type="checkbox" name="check" value="one" id="check1">
+			        <label for="check1">Remember me</label>
+		        </div><br/>
+
+		        <hr />
+
+		        <h3>Personal details</h3>
+
+
+		        <label class="field" for="example3"><span class="required">*</span> Title:</label>
+				<div class="dropdown shorter">
+					<select id="example3">
+						<option value="Mr">Mr</option>
+						<option value="Mrs">Mrs</option>
+						<option value="Miss">Miss</option>
+						<option value="Dr">Dr</option>
+					</select>
+				</div>
+
+				<label class="field" for="example1"><span class="required">*</span> First name:</label>
+				<input type="text" id="example1"><br>
+
+				<label class="field" for="example2"><span class="required">*</span> Surname:</label>
+				<input type="text" id="example2"><br>
+
+				<label class="field" for="example5">Mobile phone number:</label>
+				<input type="text" id="example5"><br>
+
+				<label class="field" for="example4"><span class="required">*</span> Postcode:</label>
+				<input type="text" id="example4"> <br/>
+
+				<label class="field">&nbsp;</label>
+				<button class="button primary">SUBMIT</button> <a href="#" class="button">Back</a>
+
+
+			</form>
+
+		</div>
+
+	</div>
+
+	<div class="row panel">
+
+		<div class="columns twelve">
+
+			<p>By submitting your details, you consent to their use as set out in our Privacy Policy. You'll also be signing up to receive marketing information (such as email, telephone, text) as detailed in our Privacy Policy, unless you tick the boxes below.</p>
+
+			<p>If you would not like to receive these communications, please <a href="#">change your preferences</a>.</p>
+
+			<p>For more information on how we use your personal details please refer to our Privacy policy and Cookie policy.</p>
+
+		</div>
+
+	</div>
+
+</div>
+
+{% endblock content %}

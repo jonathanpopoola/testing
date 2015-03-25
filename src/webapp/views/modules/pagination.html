@@ -1,0 +1,26 @@
+<div class="pagination">
+	<ul>
+		<li class="hidden"><a class="paginate button tertiary" href="./?page=1" data-rel="1">&lt;&lt;</a></li>
+		<li><a class="paginate button tertiary" href="./?page={{ pageNum - 1 }}" data-rel="{{ pageNum - 1 }}">&lt; Previous</a></li>
+
+		{% for item in data.pagination.items %}
+			<li class="{{ disableCurrent }}">
+				<a class="paginate button tertiary {% if loop.index == 3 %}selected{% endif %}" href="./?page={{ loop.index }}" data-rel="{{ loop.index }}">{{ loop.index }}</a>
+			</li>
+		{% endfor %}
+
+		<li><a class="paginate button tertiary" href="./?page={{ pageNum+1 }}" data-rel="{{ pageNum+1 }}">Next &gt;</a></li>
+		<li class="hidden"><a class="paginate button tertiary" href="./?page={{ totalPages }}" data-rel="{{ totalPages }}">&gt;&gt;</a></li>
+		<li><a class="paginate button tertiary" href="#" data-rel="">Show 150 per page</a></li>
+		<li>
+			<select>
+				<option value="Average Rating">Customer rating</option>
+				<option value="Promotions">Promotions</option>
+				<option value="Price: Low - High">Price: Low - High</option>
+				<option value="Price: High - Low">Price: High - Low</option>
+				<option value="relevance">Relevance</option>
+			</select>
+		</li>
+		<li><a class="paginate button tertiary" href="#" data-rel="">Compare</a></li>
+	</ul>
+</div>

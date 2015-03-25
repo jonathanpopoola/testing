@@ -1,0 +1,94 @@
+
+.modal {
+	position: absolute;
+	background: #fff;
+	-webkit-box-shadow: 0 0 8px rgba(0, 0, 0, 0.85);
+	-moz-box-shadow: 0 0 8px rgba(0, 0, 0, 0.85);
+	box-shadow: 0 0 8px rgba(0, 0, 0, 0.85);
+	left: 50%;
+	padding: 1em;
+	transform: translate(-50%, -50%);
+	width: em(870);
+
+	.close {
+		position: absolute;
+		right: em(10);
+		top: em(10);
+	}
+	.media, .details {
+		float: left;
+	}
+	.media {
+		width: em(400);
+	}
+	.details {
+		width: em(460);
+	}
+	.title, .product-id, .price, .pricewas, .pricesale, .specialoffercount, .delivery-information, .information, .more-info, .tertiary {
+		clear: both;
+		display: block;
+		float: left;
+	}
+	.price, .pricewas {
+		clear: none;
+	}
+	.product-id {
+		float: none;
+	}
+	.title {
+		display: block;
+		font-family: argosbook;
+		font-size: em(30);
+		margin-right: 13%;
+		text-decoration: none;
+	}
+	.product-id {
+		font-size: em(12);
+	}
+	.price {
+		font-size: em(30);
+	}
+	.pricewas {
+
+	}
+	.pricesale {
+		font-size: em(18);
+		text-transform: uppercase;
+	}
+	.specialoffercount {
+		font-family: argoscondensed_extrabold;
+		font-weight: 400;
+		font-size: em(18);
+		text-transform: uppercase;
+	}
+	.primary {
+		float: right;
+	}
+	.delivery-information {
+		border: 1px solid #ccc;
+		margin: em(10) 0;
+		padding: em(5) em(10);
+		width: 97%;
+
+		.delivery-status {
+
+		}
+		.delivery-method {
+
+		}
+	}
+	.information {
+		font-size: em(12);
+	}
+	.flag-free-delivery {
+		border: 1px solid #ff0000;
+		color: #ff0000;
+		font-size: em(10);
+		font-weight: 800;
+		float: left;
+		height: em(10);
+		line-height: em(10);
+		padding: em(3);
+		width: auto;
+	}
+}

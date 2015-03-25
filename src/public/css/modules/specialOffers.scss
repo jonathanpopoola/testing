@@ -1,0 +1,54 @@
+.special-offers {
+	.recommendation-item {
+
+		font-size: em( 14 );
+		width: em( 145, 14 );
+
+		.actions {
+
+			padding: 0;
+
+			li {
+				font-size: em( 10, 14 );
+				list-style: none;
+				display: inline-block;
+
+				.button {
+					font-size: em( 14, 10 );
+					height: em( 30, 14 );
+					line-height: em( 30, 14 );
+					padding-top: 0;
+					padding-bottom: 0;
+				}
+
+				&.quickview {
+					padding-left: em( 10 );
+				}
+			}
+		}
+	}
+
+	.plus,
+	.equals {
+		float: left;
+		padding-top: em( 150, 14 );
+		margin-right: em( 40, 14 );
+	}
+
+	.offer-price {
+
+		float: left;
+		padding-top: em( 100, 14 );
+
+		.price-prefix {
+			font-size: em( 14, 10 );
+			color: $text-grey2;
+		}
+
+		.price {
+			display: block;
+			margin-bottom: em( 3, 37 );
+		}
+	}
+
+}

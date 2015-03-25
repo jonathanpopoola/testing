@@ -1,0 +1,19 @@
+@mixin placeholder($style-list) {
+
+    $form_placeholder_prefixes: ('::-webkit-input-placeholder', ':-moz-placeholder', '::-moz-placeholder', ':-ms-input-placeholder', '::input-placeholder', '::placeholder' );
+
+    @each $prefix in $form_placeholder_prefixes {
+        &[placeholder]#{$prefix} {
+            @if length($style-list) == 1 {
+                //@each $style in $style-list {
+                //#{nth($style,1)}: #{nth($style,2)};
+                #{nth($style-list,1)}: #{nth($style-list,2)};
+                //}
+            } @else {
+                @each $style in $style-list {
+                    #{nth($style,1)}: #{nth($style,2)}
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,14 @@
+<div class="storelist">
+	<h4>{{ data.storelist.title }}</h4>
+	<ul>
+		{% for item in  facet.items %}
+		<li>
+			<input id="storelist" type="checkbox" id="storelist-{{ data.storelist[0] }}" />
+			<label for="storelist"><a {{ data.storelist.item }}</label>
+		</li>
+		{% endfor %}
+	</ul>
+</div>
+
+
+

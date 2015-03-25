@@ -1,0 +1,114 @@
+body.addedtotrolley {
+	background: #e8e8e8;
+	
+	h2 {
+		font-size: 30px;
+		padding-left: 60px;
+		position: relative;
+
+		&:before {
+			content: '';
+			display: block;
+			width:50px;
+			height:50px;
+			position: absolute;
+			left:0;
+			top:5px;
+		}
+	}
+
+	span.producttitle {
+		font-family: $argosBook;
+		font-size: 1.8em;
+		color:#333;
+		margin-bottom:10px;
+	}
+
+	span.quantity {
+		font-size: 1.5em;
+		font-family: $argosBold;
+		font-weight: bold;
+		display: block;
+		margin-top:10px;
+	}
+
+	.panel-trolleyaddsummary {
+		margin-top: 20px;
+		margin-bottom:0;		
+
+		img {
+			float:left;
+			padding-right:10px;
+			width: 50px;
+		}
+
+		h3 {
+			border-bottom: 0;
+			margin-bottom:10px;
+			padding-bottom:0;
+		}
+
+		.actions a {
+			float:right;
+			text-align: center;
+			width:100%;
+			margin-bottom: 10px;
+
+			&:last-child {
+				margin-bottom:0;
+			}
+
+			&:hover {
+				top:0;
+				margin-top:1px;
+			}
+		}
+	}
+
+	.panel-trolleyprotect {
+		padding-bottom: 0;
+
+		form.generic {
+			margin-bottom: 0;
+
+			.radiofields {
+				padding:20px 0;
+				padding-left:20px;
+				border-top:1px solid #ccc;
+				border-bottom:1px solid #ccc;
+
+				&:last-child {
+					border:0;
+				}
+				span.price {
+					line-height: 10px;
+				}
+			}
+		}
+		.panel-protectoptions {
+			padding: 20px;
+		}
+	}
+
+	.checkout-delivery {
+		display: inline-block;
+		position: relative;
+		top:3px;
+		margin-right: 5px;
+
+		&.indent-left {
+			margin-left: 10%;
+		}
+	}
+
+	.checkout-home {
+		display: inline-block;
+		position: relative;
+		top:2px;
+		margin-right: 5px;
+
+		&.indent-left {
+			margin-left: 2%;
+		}
+	}
+}

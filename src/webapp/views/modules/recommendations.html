@@ -1,0 +1,7 @@
+<ul class="recommendation-grid {% if halfWidth %}half-width{% else %}full-width{% endif %}">
+	{% for item in items %}
+	<li class="recommendation-item columns {% if halfWidth %}four{% else %}two{% endif %}">
+    	{% include "../snippets/recommendationItem.html" item %}
+	</li>
+	{% endfor %}
+</ul>

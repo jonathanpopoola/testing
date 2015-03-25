@@ -1,0 +1,133 @@
+.mega-nav {
+
+	width: 100%;
+	float: left;
+
+	ul {
+		position: relative;
+		padding:0;
+
+		li {
+			display: inline;
+			border-bottom: #e32219 solid 0px;
+			float: left;
+			padding:0;
+
+			a{
+				font-size: 15px;
+				padding: 10px 8px 10px 8px;
+				display: block;
+			}
+
+			section {
+				display: none;
+				position: absolute;
+				width: 996px;
+				top: 2.9em;
+				left: -2px;
+				background: #fff;
+				border: $color-grey4 solid 1px;
+				border-top: 2px solid $text-red;
+				z-index: 100;
+				box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.25);
+				-webkit-box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.25);
+				-moz-box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.25);
+				overflow: hidden;
+
+				dl{
+					position: relative;
+					border: none;
+					top: 0;
+					left: 0;
+					box-shadow: none;
+					-webkit-box-shadow: none;
+					-moz-box-shadow: none;
+
+					&.highlight-column{
+						position: relative;
+
+						&:before{
+							content: '';
+							position: absolute;
+							background: #f4f4f4;
+							top: 0;
+							left: 0;
+							width: 100%;
+							height: 1000px;
+							display: block;
+							z-index: -1;
+						}
+						
+					}
+				}
+			}
+
+			&:hover, &.hover{
+				background: $text-red;
+
+				a{
+					color: #fff;
+				}
+
+				section{
+					display: block;
+
+					dl{
+						width: 150px;
+						float: left;
+						padding: 10px;
+
+						a{
+							white-space: normal;
+							text-transform: none;
+						}
+
+						dt{
+							border-bottom: 1px solid $color-grey4;
+							margin-bottom: 0.6em;
+
+							a{
+								font-family: $argosBook;
+								font-size: 1.43em;
+								color: $text-grey1;
+							}
+						}
+
+						dd{
+
+							a{
+								font-family: Arial, Helvetica, sans-serif;
+								font-size: 0.86em;
+								padding: 4px;
+								
+								&:hover{
+									background: $text-red;
+									color: #fff;
+								}
+							}
+						}
+					}
+
+					a{
+						color: $text-grey3
+					}
+				}
+			}
+		}
+	}
+
+	.mega-nav-highlight > a {
+		color: $text-green;
+	}
+	
+	&.mega-nav-delayed{
+		
+		ul li:hover section{
+			display: none;
+		}
+
+		ul li.hover section{
+			display: block;
+		}
+	}
+}

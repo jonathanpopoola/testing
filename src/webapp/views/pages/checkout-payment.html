@@ -1,0 +1,102 @@
+{% extends '../layout.html' %}
+
+{% block content %}
+
+<div class="content container">
+
+	<div class="row panel">
+
+		<h3>Your order summary</h3>
+
+		<hr />
+
+		<div class="columns four">
+
+			<form class="generic">
+
+				<label class="field" for="example7">Got a promotional code?</label>
+				<input type="text" id="example7"> <a href="#" class="button secondary">Apply</a>
+
+			</form>
+
+		</div>
+
+		<div class="columns four"></div>
+
+		<div class="columns four right">
+
+			<p>Subtotal: &pound;999.99</p>
+			<p>Delivery charge: &pound;999.99</p>
+			<p class="salehighlight">Promotional discount: <span class="right">-&pound;999.99</span></p>
+			<p>Total: <span class="price"><small>&pound;999.99</small></span></p>
+
+		</div>
+
+	</div>
+
+	<div class="row panel">
+
+		<div class="three columns">
+
+			<ul>
+				<li><a href="#">Pay with a card</a></li>
+				<li>
+					<a href="#">Apply for an Argos card</a>
+					<p class="promotionhighlight">Buy now pay later<br/>Fixed monthly payments</p>
+					<p>Other credit plans available during checkout<br/>Representative 29.9% APR variable</p>
+				</li>
+				<li><a href="#">Pay with PayPal</a></li>
+			</ul>
+
+		</div>
+
+		<div class="nine columns">
+			<h3>1.  Select from one of your saved cards</h3>
+			<br/><br/><br/><br/>
+
+			<h3>2.  Confirm billing address</h3>
+			<p>123 Stamford Avenue, Springfield, Milton Keynes, Buckinghamshire MK6 3LG, United Kingdom</p>
+
+			<hr/>
+
+			<h3>3.  Accept terms and conditions</h3>
+			<p>Please check the box below to confirm you have read and agree to the terms and conditions before clicking 'Continue'. </p>
+			<p>On the next page you will have an opportunity to review your order summary before placing and paying for your order.</p>
+			<p>If buying insurance, checking this box confirms that you have read the summary of cover and are aware that the insurance terms &amp; conditions are available to view.</p>
+
+			<p><input type="checkbox" /><label>I have read and agree to the terms and conditions of this purchase</label></p>
+
+			<button class="button primary">Place order now</button>
+		</div>
+
+	</div>
+
+	<div class="row">
+
+		<div class="columns six panel">
+
+			<h3>Need help?</h3>
+			<hr />
+			<p><a href="#">Click here</a> or alternatively call 0345 640 2020</p>
+
+		</div>
+
+		<div class="columns six panel right">
+
+			<h3>Symbols</h3>
+			<hr />
+			<p>
+				Click on the product name for further details on these symbols and any offer end dates.<br/>
+				Excluded from our 30 day money back guarantee.<br/>
+				Price footnote<br/>
+				Reduced special offer price only when items are bought together in one transaction.<br/>
+				¥ Subject to store opening hours.
+			</p>
+
+		</div>
+
+	</div>
+	
+</div>
+
+{% endblock content %}

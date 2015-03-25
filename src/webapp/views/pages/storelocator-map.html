@@ -1,0 +1,107 @@
+{% extends '../layout.html' %}
+
+{% block title %}Store Locator Landing{% endblock %}
+
+{% block content %}
+
+<div class="content">
+
+	<div class="container">
+		<div class="row">
+			<div class="twelve columns">
+				{% include "../modules/storeSearch.html" data.storeSearch %}
+			</div>
+		</div>
+		<div class="row">
+			<div class="twelve columns">
+				<div class="argos-store-information" itemtype="http://schema.org/LocalBusiness">
+					<div class="store-details">
+						<span class="icon-map-pointer"></span>
+						<h1 class="store-welcome-message">
+							Welcome to the <span itemprop="branchOf">Argos</span> store at <br>
+							<div class="argos-storename" itemprop="name">Chancery Lane Holborn</div>
+							<div class="argos-storename-miles">0.3 miles</div>
+						</h1>
+						<div class="store-address" itemprop="address" itemtype="http://schema.org/PostalAddress">
+							<h2>Address</h2>
+							<span itemprop="streetAddress">5 Grays Inn Road, Holborn</span><br>
+							<span itemprop="addressLocality">London</span><br>
+							<span itemprop="addressRegion">Greater London</span><br>
+							<span itemprop="postalCode">WC1X 8PH</span>
+							<h2>Telephone Number</h2>
+				<span itemprop="telephone">
+					0345 1657221
+				</span>
+						</div>
+						<div class="store-hours opening-hours">
+							<h2>
+								Opening hours*
+							</h2>
+							<ul>
+								<li name="Mon">Mon
+									<time itemprop="openingHours" datetime="Mo 09:00-20:00">
+										09:00-20:00
+									</time>
+								</li>
+								<li name="Tue">Tue
+									<time itemprop="openingHours" datetime="Tu 09:00-20:00">
+										09:00-20:00
+									</time>
+								</li>
+								<li name="Wed">Wed
+									<time itemprop="openingHours" datetime="We 09:00-20:00">
+										09:00-20:00
+									</time>
+								</li>
+								<li name="Thu">Thu
+									<time itemprop="openingHours" datetime="Th 09:00-20:00">
+										09:00-20:00
+									</time>
+								</li>
+								<li name="Fri">Fri
+									<time itemprop="openingHours" datetime="Fr 09:00-20:00">
+										09:00-20:00
+									</time>
+								</li>
+								<li name="Sat">Sat
+									<time itemprop="openingHours" datetime="Sa 09:30-17:30">
+										09:30-17:30
+									</time>
+								</li>
+								<li name="Sun">Sun
+									<time itemprop="openingHours" datetime="Su 11:00-17:00">
+										11:00-17:00
+									</time>
+								</li>
+							</ul>
+						</div>
+						<a class="button primary" href="/page/home">Shop Now</a>
+
+						<div class="store-hours-disclaimer">
+							<p>
+								Argos combine the best of shopping online and shopping on the high street, offering a fast, easy and seamless
+								way to get what you want.  Browse online and check stock in your local store before reserving your item!
+							</p>
+							<p>
+								Alternatively, why not shop our range of <a href="/static/Browse/ID72/33005908/c_1/1|category_root|Home+and+garden|33005908.htm">Home &amp; Garden</a>,
+								<a href="/static/Browse/ID72/33006169/c_1/1|category_root|Technology|33006169.htm">Technology</a>,
+								or <a href="/static/Browse/ID72/33006252/c_1/1|category_root|Toys|33006252.htm">Toys</a> now.
+							</p>
+							<p>
+								* Please note that these opening times are updated regularly but may change due to unforeseen circumstances.
+							</p>
+						</div>
+					</div>
+					<div class="store-map">
+						<p>map script goes here</p>
+					</div>
+				</div>
+
+
+			</div>
+		</div>
+	</div>
+
+{% endblock content %}
+
+

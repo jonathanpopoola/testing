@@ -1,0 +1,48 @@
+<header class="main-header">
+
+	{% include "./appBanner.html" %}
+
+	<div class="container">
+
+		<div class="main-logo">
+			<a href="/">
+				<img src="/public/img/argos_logo.png" alt="Brand logo - Home" width="91" height="81">
+			</a>
+		</div>
+
+		<nav class="extra-nav">
+			<ul class="extra-nav-top">
+				<li class="sign-in"><a href="/page/myaccount-signin">Sign in</a></li>
+				<li class="trolley"><a href="/page/tlp/1">Trolley</a><span class="trolley-items">24</span></li>
+			</ul>
+			<ul class="extra-nav-bottom">
+				<li class="price-cuts"><a class="button" href="/">Price cuts</a></li>
+				<li class="clearance"><a class="button" href="/">Clearance</a></li>
+			</ul>
+		</nav>
+
+		<nav class="top-nav">
+			<ul>
+				<li class="help"><a href="/">Help</a></li>
+				<li class="store-locator"><a href="/page/storelocator-landing">Store Locator</a></li>
+			</ul>
+		</nav>
+
+		<div class="search-area">
+			<form method="POST" action="/someURL/mail">
+				<fieldset>
+					<legend>Search Argos:</legend>
+					<div>
+						<label>Search Argos</label>
+						<input type="text" id="search" name="search" placeholder="Search Argos...">
+						<input type="submit" value="search">
+					</div>
+				</fieldset>
+			</form>
+		</div>
+
+		{% include "./megaNav.html" %}
+
+	</div>
+
+</header>

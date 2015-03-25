@@ -1,0 +1,428 @@
+@import "_retina-sprites";
+
+//first we'll define the folders where the sprites are and their layouts
+$icons: sprite-map("icons/*.png", $layout: horizontal, $spacing: 5px);
+$icons-2x: sprite-map("icons-2x/*.png", $layout: horizontal, $spacing: 10px);
+
+%icons
+{
+	background-image: sprite-url($icons);
+
+	@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+		background-image: sprite-url($icons-2x);
+	}
+}
+
+
+%icon-close {
+	@extend %icons;
+	@include use-sprite(ic_action_cross);
+}
+.icon-close{ @extend %icon-close;  }
+
+%icon-search {
+	@extend %icons;
+	@include use-sprite(ic_action_search);
+}
+.icon-search{ @extend %icon-search; }
+
+%icon-trolley {
+	@extend %icons;
+	@include use-sprite(ic_action_trolley_up);
+}
+.icon-trolley{ @extend %icon-trolley; }
+
+%icon-location {
+	@extend %icons;
+	@include use-sprite(ic_action_map);
+}
+.icon-location{ @extend %icon-location; }
+
+%icon-refine {
+	@extend %icons;
+	@include use-sprite(ic_action_refine);
+}
+.icon-refine{ @extend %icon-refine; }
+
+%icon-refresh {
+	@extend %icons;
+	@include use-sprite(ic_action_refresh);
+}
+.icon-refresh{ @extend %icon-refresh; }
+
+%icon-sort-by {
+	@extend %icons;
+	@include use-sprite(ic_action_relevance);
+}
+.icon-sort-by{ @extend %icon-sort-by; }
+
+%icon-reset {
+	@extend %icons;
+	@include use-sprite(ic_action_reset);
+}
+.icon-reset{ @extend %icon-reset; }
+
+%icon-send {
+	@extend %icons;
+	@include use-sprite(ic_action_send);
+}
+.icon-send{ @extend %icon-send; }
+
+
+%icon-share {
+	@extend %icons;
+	@include use-sprite(ic_action_share);
+}
+.icon-share{ @extend %icon-share; }
+
+
+%icon-home-delivery {
+	@extend %icons;
+	@include use-sprite(ic_home_delivery);
+}
+.icon-home-delivery{ @extend %icon-home-delivery; }
+
+
+%icon-home-delivery-small {
+	@extend %icons;
+	@include use-sprite(r-icon-home-delivery-small);
+}
+.icon-home-delivery-small{ @extend %icon-home-delivery-small; }
+
+
+%icon-store-collection {
+	@extend %icons;
+	@include use-sprite(ic_sc_small);
+}
+.icon-store-collection{ @extend %icon-store-collection; }
+
+
+%icon-zoom {
+	@extend %icons;
+	@include use-sprite(ic_zoom);
+}
+.icon-zoom{ @extend %icon-zoom; }
+
+
+%icon-add-to-wishlist {
+	@extend %icons;
+	@include use-sprite(ic_inpage_wishlist_empty);
+}
+.icon-add-to-wishlist{ @extend %icon-add-to-wishlist; }
+
+
+%icon-remove-from-wishlist {
+	@extend %icons;
+	@include use-sprite(ic_inpage_wishlist_filled);
+}
+.icon-remove-from-wishlist{ @extend %icon-remove-from-wishlist; }
+
+
+%icon-chevron {
+	@extend %icons;
+	@include use-sprite(chevron_r);
+}
+.icon-chevron{ @extend %icon-chevron; }
+
+
+%icon-cross {
+	@extend %icons;
+	@include use-sprite(icon_cross);
+}
+.icon-cross{ @extend %icon-cross; }
+
+
+%icon-tick {
+	@extend %icons;
+	@include use-sprite(icon_tick);
+}
+.icon-tick{ @extend %icon-tick; }
+
+
+%icon-delivery-slot {
+	@extend %icons;
+	@include use-sprite(r-icon-clock);
+}
+.icon-delivery-slot{ @extend %icon-delivery-slot; }
+
+
+%icon-settings {
+	@extend %icons;
+	@include use-sprite(r-icon-cog);
+}
+.icon-settings{ @extend %icon-settings; }
+
+
+%icon-delivery-instructions {
+	@extend %icons;
+	@include use-sprite(r-icon-delivery-instructions);
+}
+.icon-delivery-instructions{ @extend %icon-delivery-instructions; }
+
+
+%icon-two-man-delivery {
+	@extend %icons;
+	@include use-sprite(r-icon-large-delivery);
+}
+.icon-two-man-delivery{ @extend %icon-two-man-delivery; }
+
+
+%icon-order-summary {
+	@extend %icons;
+	@include use-sprite(r-icon-ordsum);
+}
+.icon-order-summary{ @extend %icon-order-summary; }
+
+
+%icon-details {
+	@extend %icons;
+	@include use-sprite(r-icon-other-delivery);
+}
+.icon-details{ @extend %icon-details; }
+
+
+%icon-protectandsmile {
+	@extend %icons;
+	@include use-sprite(ico-protectandsmile);
+}
+.icon-protectandsmile{ @extend %icon-protectandsmile; }
+
+
+%icon-delivery {
+	@extend %icons;
+	@include use-sprite(ico-delivery);
+}
+.icon-delivery{ @extend %icon-delivery; }
+
+
+%icon-home {
+	@extend %icons;
+	@include use-sprite(ico-home);
+}
+.icon-home{ @extend %icon-home; }
+
+
+%icon-app {
+	@extend %icons;
+	@include use-sprite(icon_app);
+}
+.icon-app{ @extend %icon-app; }
+
+%icon-fb {
+	@extend %icons;
+	@include use-sprite(icon_facebook);
+}
+.icon-fb{ @extend %icon-fb; }
+
+%icon-gplus {
+	@extend %icons;
+	@include use-sprite(icon_google);
+}
+.icon-gplus{ @extend %icon-gplus; }
+
+%icon-help {
+	@extend %icons;
+	@include use-sprite(icon_help);
+}
+.icon-help{ @extend %icon-help; }
+
+%icon-map-small {
+	@extend %icons;
+	@include use-sprite(icon_locator);
+}
+.icon-map-small{ @extend %icon-map-small; }
+
+%icon-mcomm {
+	@extend %icons;
+	@include use-sprite(icon_mcomm);
+}
+.icon-mcomm{ @extend %icon-mcomm; }
+
+%icon-pintrest {
+	@extend %icons;
+	@include use-sprite(icon_pinterest);
+}
+.icon-pintrest{ @extend %icon-pintrest; }
+
+%icon-search {
+	@extend %icons;
+	@include use-sprite(icon_searchbar);
+}
+.icon-search{ @extend %icon-search; }
+
+%icon-signin {
+	@extend %icons;
+	@include use-sprite(icon_signin);
+}
+.icon-signin{ @extend %icon-signin; }
+
+%icon-trolley {
+	@extend %icons;
+	@include use-sprite(icon_trolley);
+}
+.icon-trolley{ @extend %icon-trolley; }
+
+%icon-twitter {
+	@extend %icons;
+	@include use-sprite(icon_twitter);
+}
+.icon-twitter{ @extend %icon-twitter; }
+
+%icon-youtube {
+	@extend %icons;
+	@include use-sprite(icon_youtube);
+}
+.icon-youtube{ @extend %icon-youtube; }
+
+%icon-more-info {
+	@extend %icons;
+	@include use-sprite(more-info);
+}
+.icon-more-info{ @extend %icon-more-info; }
+
+%icon-delivery-inverse {
+	@extend %icons;
+	@include use-sprite(icon_home_delivery_inverse);
+}
+.icon-delivery-inverse{ @extend %icon-delivery-inverse; }
+
+%icon-collection-inverse {
+	@extend %icons;
+	@include use-sprite(icon_store_collection_inverse);
+}
+.icon-collection-inverse{ @extend %icon-collection-inverse; }
+
+%icon-store-locator-search {
+	@extend %icons;
+	@include use-sprite(store-search-icon);
+}
+.icon-store-locator-search{ @extend %icon-store-locator-search; }
+
+
+%icon-chevron-active {
+	@extend %icons;
+	@include use-sprite(chevron-up);
+}
+
+.active .icon-chevron{ @extend %icon-chevron-active; }
+
+%icon-chevron {
+	@extend %icons;
+	@include use-sprite(chevron-down);
+}
+.icon-chevron{ @extend %icon-chevron; }
+
+
+%icon-accordion-pointer {
+	@extend %icons;
+	@include use-sprite(black-pointer);
+}
+.icon-accordion-pointer{ @extend %icon-accordion-pointer; }
+
+%icon-extra {
+	@extend %icons;
+	@include use-sprite(extra);
+}
+.icon-extra{ @extend %icon-extra; }
+
+%icon-plus {
+	@extend %icons;
+	@include use-sprite(plus);
+}
+.icon-plus{ @extend %icon-plus; }
+
+%icon-equals {
+	@extend %icons;
+	@include use-sprite(equals);
+}
+.icon-equals{ @extend %icon-equals; }
+
+%icon-argos-logo {
+	@extend %icons;
+	@include use-sprite(argos_logo);
+}
+.icon-argos-logo{ @extend %icon-argos-logo; }
+
+%icon-answer-bubble {
+	@extend %icons;
+	@include use-sprite(answer_bubble);
+}
+.icon-answer-bubble{ @extend %icon-answer-bubble; }
+
+%icon-user {
+	@extend %icons;
+	@include use-sprite(user);
+}
+.icon-user{ @extend %icon-user; }
+
+%icon-answer-bubble {
+	@extend %icons;
+	@include use-sprite(answer_bubble);
+}
+.icon-answer-bubble{ @extend %icon-answer-bubble; }
+
+%icon-question-bubble {
+	@extend %icons;
+	@include use-sprite(question_bubble);
+}
+.icon-question-bubble{ @extend %icon-question-bubble; }
+
+%icon-thumbs-up {
+	@extend %icons;
+	@include use-sprite(thumbs_up);
+}
+.icon-thumbs-up{ @extend %icon-thumbs-up; }
+
+%icon-thumbs-down {
+	@extend %icons;
+	@include use-sprite(thumbs_down);
+}
+.icon-thumbs-down{ @extend %icon-thumbs-down; }
+
+%icon-map-pointer {
+	@extend %icons;
+	@include use-sprite(red-pointer);
+}
+.icon-map-pointer{ @extend %icon-map-pointer; }
+
+%icon-availability-instock {
+	@extend %icons;
+	@include use-sprite(icon_availability_instock);
+}
+.icon-availability-instock{ @extend %icon-availability-instock; }
+
+%icon-availability-out-of-stock {
+  @extend %icons;
+  @include use-sprite(icon_availability_out_of_stock);
+}
+.icon-availability-out-of-stock{ @extend %icon-availability-out-of-stock; }
+
+%icon-orderhomedelivery {
+	@extend %icons;
+	@include use-sprite(icon-orderhomedelivery);
+}
+.icon-orderhomedelivery { @extend %icon-orderhomedelivery; }
+
+%icon-orderlargeitems {
+	@extend %icons;
+	@include use-sprite(icon-orderlargeitems);
+}
+.icon-orderlargeitems { @extend %icon-orderlargeitems; }
+
+%icon-ordersmallitems {
+	@extend %icons;
+	@include use-sprite(icon-ordersmallitems);
+}
+.icon-ordersmallitems { @extend %icon-ordersmallitems; }
+
+%icon-ordersummary {
+	@extend %icons;
+	@include use-sprite(icon-ordersummary);
+}
+.icon-ordersummary { @extend %icon-ordersummary; }
+
+%icon-ordertimes {
+	@extend %icons;
+	@include use-sprite(icon-ordertimes);
+}
+.icon-ordertimes { @extend %icon-ordertimes; }

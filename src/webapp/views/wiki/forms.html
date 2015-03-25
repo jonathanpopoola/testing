@@ -1,0 +1,84 @@
+{% extends '../layout.html' %}
+
+{% block title %}Wiki > Forms{% endblock %}
+
+{% block content %}
+
+  <div class="content container">
+
+		<hr/>
+		<h2>Forms</h2>
+		<hr />
+
+		<form class="generic">
+			<h3>Text boxes</h3>
+			<label class="field" for="example1">Short title</label>
+			<input type="text" id="example1"><br>
+
+            <label class="field" for="example3">Title with long textbox</label>
+			<input type="text" class="wider" id="example3"><br>
+
+			<label class="field" for="example2">A very much longer title</label>
+			<input type="text" id="example2"><br>
+
+            <label class="field" for="example3">Valid textbox</label>
+			<input type="text" class="valid" id="example3"><div class="valid-info"><span class="icon-tick"></span></div><br>
+
+            <label class="field" for="example3">Invalid textbox</label>
+			<input type="text" class="invalid" id="example3"><div class="invalid-info"><span class="icon-cross"></span><span>This is help text for error</span></div><br>
+
+			<h3>Text areas</h3>
+			<label class="field" for="example2">Textarea example</label>
+			<textarea rows="4"></textarea>
+
+			<h3>Select boxes</h3>
+			<label class="field" for="example3">Dropdown Example</label>
+			<div class="dropdown">
+				<select id="example3">
+					<option value="dropdown">Dropdown</option>
+					<option value="option1">Option 1</option>
+					<option value="option2">Option 2</option>
+					<option value="option3">Option 3</option>
+				</select>
+			</div>
+
+
+            <label class="field" for="example3">Longer Dropdown Example</label>
+			<div class="dropdown">
+				<select id="example3" class="wider">
+					<option value="dropdown">Dropdown</option>
+					<option value="option1">Option 1</option>
+					<option value="option2">Option 2</option>
+					<option value="option3">Option 3</option>
+				</select>
+			</div>
+
+			<h3>Radio buttons</h3>
+			<div class="radiofields">
+				<input type="radio" name="number" value="one" id="rad1">
+		        <label for="rad1">Label</label>
+		        <br>
+		        <input type="radio" name="number" value="two" id="rad2">
+		        <label for="rad2">Label</label>
+			</div>
+
+			<br />
+
+			<h3>Checkbox buttons</h3>
+			<div class="checkboxfields">
+		        <input type="checkbox" name="check" value="one" id="check1">
+		        <label for="check1">Label</label>
+		        <br>
+		        <input type="checkbox" name="check" value="two" id="check2">
+		        <label for="check2">Label</label>
+			</div>
+
+			<br />
+
+			<button class="button primary">Primary Submit Button</button>
+
+		</form>
+
+  </div>
+
+{% endblock content %}

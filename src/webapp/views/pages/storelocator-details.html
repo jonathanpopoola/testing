@@ -1,0 +1,23 @@
+{% extends '../layout.html' %}
+
+{% block title %}Store Locator Landing{% endblock %}
+
+{% block content %}
+
+<div class="content">
+	<div class="container">
+		<div class="row">
+			<div class="twelve columns">
+				{% include "../modules/storeSearch.html" data.storeSearch %}
+			</div>
+		</div>
+		<div class="row">
+			<div class="twelve columns">
+				{% include "../modules/storelocator-details.html" data.details %}
+			</div>
+		</div>
+	</div>
+</div>
+{% endblock content %}
+
+
